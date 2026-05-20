@@ -1,0 +1,1335 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1462" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-349" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="1090" width="710" x="60" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-19" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeDeleteService" vertex="1">
+          <mxGeometry height="260" width="180" x="1537" y="2856" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-20" parent="NhKwcbka7pVLSmcXAw_T-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- AppDbContext _context :AppDbContext型&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-23" parent="NhKwcbka7pVLSmcXAw_T-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeRepository&lt;div&gt;:IEmployeeRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-24" parent="NhKwcbka7pVLSmcXAw_T-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentRepository&lt;div&gt;:IDepartmentRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-21" parent="NhKwcbka7pVLSmcXAw_T-19" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-22" parent="NhKwcbka7pVLSmcXAw_T-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ GetById(int id): Department" vertex="1">
+          <mxGeometry height="26" width="180" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-25" parent="NhKwcbka7pVLSmcXAw_T-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;GetDepartments() :List&amp;lt;Department" vertex="1">
+          <mxGeometry height="40" width="180" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-26" parent="NhKwcbka7pVLSmcXAw_T-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Delete(Employee employee) : void" vertex="1">
+          <mxGeometry height="40" width="180" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-27" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;IEmployeeDeleteService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1529.5" y="2731" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-28" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="1892" y="2886" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-41" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="NhKwcbka7pVLSmcXAw_T-19" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="NhKwcbka7pVLSmcXAw_T-27" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1817" y="2861" as="sourcePoint" />
+            <mxPoint x="1977" y="2861" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-42" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.499;entryY=1.072;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1950" y="3208.13" as="sourcePoint" />
+            <mxPoint x="1949.8000000000002" y="3161.002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-43" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="NhKwcbka7pVLSmcXAw_T-28" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1941" y="2911" as="sourcePoint" />
+            <mxPoint x="1947" y="3116" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-44" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="NhKwcbka7pVLSmcXAw_T-28" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="NhKwcbka7pVLSmcXAw_T-20" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1957" y="2931" as="sourcePoint" />
+            <mxPoint x="1957" y="3126" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-45" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IEmployeeRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1522" y="3161" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-46" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="NhKwcbka7pVLSmcXAw_T-45" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.466;entryY=1.071;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" target="NhKwcbka7pVLSmcXAw_T-26" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1957" y="2936" as="sourcePoint" />
+            <mxPoint x="1957" y="3126" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-47" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-65" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="NhKwcbka7pVLSmcXAw_T-45" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1837" y="3191" as="sourcePoint" />
+            <mxPoint x="1637" y="2791" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-48" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="1403" y="3320" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-58" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1438" y="3320" as="sourcePoint" />
+            <mxPoint x="1447.64" y="3253.574" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-59" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.909;exitY=-0.026;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1334.34" y="3297.4" as="sourcePoint" />
+            <mxPoint x="1332" y="3251" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-60" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1282" y="3099" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-61" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1379" y="3209" as="sourcePoint" />
+            <mxPoint x="1378.73" y="3149" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-62" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="NhKwcbka7pVLSmcXAw_T-24" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1477" y="3131" as="sourcePoint" />
+            <mxPoint x="1537.0000000000002" y="3081" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-63" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;ILogger&amp;lt;T&amp;gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="1050" y="2541" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-64" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeDeleteController" vertex="1">
+          <mxGeometry height="370" width="260" x="1232" y="2511" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-65" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _logger&lt;div&gt;&amp;nbsp;:ILogger&amp;lt;EmployeeDeleteController&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-66" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeDeleteService&lt;div&gt;:IEmployeeDeleteService型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-67" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- _adapter&lt;/div&gt;&lt;div&gt;:EmployeeDeleteViewModelAdapter型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-76" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _empDataStore&lt;div&gt;:TempDataStore&amp;lt;EmployeeDeleteViewModel&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-68" parent="NhKwcbka7pVLSmcXAw_T-64" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-69" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Enter() :&amp;nbsp;IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-70" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Confirm(EmployeeDeleteViewModel viewModel) :IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-71" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Register(EmployeeDeleteViewModel viewModel):IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-81" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Complete():IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-82" parent="NhKwcbka7pVLSmcXAw_T-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Back(EmployeeDeleteViewModel viewModel):IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-72" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="NhKwcbka7pVLSmcXAw_T-27" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1487" y="3043" as="sourcePoint" />
+            <mxPoint x="1500" y="2610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-74" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="NhKwcbka7pVLSmcXAw_T-63" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="NhKwcbka7pVLSmcXAw_T-65" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1540" y="2706" as="sourcePoint" />
+            <mxPoint x="1487" y="2699" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-77" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeDeleteViewModelAdapter" vertex="1">
+          <mxGeometry height="74" width="270" x="1222" y="2949" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-79" parent="NhKwcbka7pVLSmcXAw_T-77" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Restore(EmployeeDeleteViewModel target)&lt;div&gt;&amp;nbsp;: Employee&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;※Domain Object型&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NhKwcbka7pVLSmcXAw_T-80" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="NhKwcbka7pVLSmcXAw_T-77" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.488;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="NhKwcbka7pVLSmcXAw_T-82" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1487" y="3141" as="sourcePoint" />
+            <mxPoint x="1359" y="2901" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-9" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="110" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-10" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeRepository" vertex="1">
+          <mxGeometry height="176" width="200" x="470" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-11" parent="3MW-sOkPAS2grmwaOfTg-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- AppDbContext _context :AppDbContext型&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="200" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-12" parent="3MW-sOkPAS2grmwaOfTg-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _adapter&lt;div&gt;:EmployeeEntityAdapter型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-13" parent="3MW-sOkPAS2grmwaOfTg-10" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-14" parent="3MW-sOkPAS2grmwaOfTg-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Create(Employee employee):void" vertex="1">
+          <mxGeometry height="28" width="200" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-15" parent="3MW-sOkPAS2grmwaOfTg-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+FindAll() :&amp;nbsp;List&amp;lt;Employee&amp;gt;" vertex="1">
+          <mxGeometry height="26" width="200" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-16" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeEntityAdapter" vertex="1">
+          <mxGeometry height="100" width="260" x="110" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-17" parent="3MW-sOkPAS2grmwaOfTg-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Convert(Employee domain):EmployeeEntity" vertex="1">
+          <mxGeometry height="26" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-18" parent="3MW-sOkPAS2grmwaOfTg-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Restore(EmployeeEntity target)&lt;div&gt;&amp;nbsp;: Employee&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;※Domain Object型&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-23" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;IEmployeeRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="110" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-27" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="100" width="260" x="115" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-28" parent="3MW-sOkPAS2grmwaOfTg-27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Convert(&lt;span style=&quot;text-align: center;&quot;&gt;Department&lt;/span&gt;&amp;nbsp;domain):&lt;span style=&quot;text-align: center;&quot;&gt;Department&lt;/span&gt;Entity" vertex="1">
+          <mxGeometry height="26" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-29" parent="3MW-sOkPAS2grmwaOfTg-27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Restore(&lt;span style=&quot;text-align: center;&quot;&gt;Department&lt;/span&gt;Entity target)&lt;div&gt;&amp;nbsp;:&lt;span style=&quot;text-align: center;&quot;&gt;Department&lt;/span&gt;&amp;nbsp;※Domain Object型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-30" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="176" width="230" x="467" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-31" parent="3MW-sOkPAS2grmwaOfTg-30" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- AppDbContext _context :AppDbContext型&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="230" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-32" parent="3MW-sOkPAS2grmwaOfTg-30" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _adapter&lt;div&gt;:&lt;span style=&quot;text-align: center;&quot;&gt;Department&lt;/span&gt;EntityAdapter型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="230" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-33" parent="3MW-sOkPAS2grmwaOfTg-30" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-34" parent="3MW-sOkPAS2grmwaOfTg-30" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Create(Department employee):void" vertex="1">
+          <mxGeometry height="28" width="230" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-35" parent="3MW-sOkPAS2grmwaOfTg-30" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+FindAll() :&amp;nbsp;List&amp;lt;Employee&amp;gt;" vertex="1">
+          <mxGeometry height="26" width="230" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-38" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="110" y="229" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-41" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;ILogger&amp;lt;T&amp;gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="110" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-58" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=31;" value="社員削除" vertex="1">
+          <mxGeometry height="30" width="270" x="962" y="2460" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-59" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=31;" value="共通" vertex="1">
+          <mxGeometry height="30" width="270" x="260" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-61" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="1211" y="3302" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-62" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="1870" y="3207.13" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-64" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="1289.5" y="3211" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-65" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="1857" y="3116" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-66" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentDeleteService" vertex="1">
+          <mxGeometry height="260" width="180" x="2650" y="2884" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-67" parent="3MW-sOkPAS2grmwaOfTg-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- AppDbContext _context :AppDbContext型&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-68" parent="3MW-sOkPAS2grmwaOfTg-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeRepository&lt;div&gt;:IEmployeeRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-69" parent="3MW-sOkPAS2grmwaOfTg-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentRepository&lt;div&gt;:IDepartmentRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-70" parent="3MW-sOkPAS2grmwaOfTg-66" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-71" parent="3MW-sOkPAS2grmwaOfTg-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ GetById(int id): Department" vertex="1">
+          <mxGeometry height="26" width="180" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-72" parent="3MW-sOkPAS2grmwaOfTg-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;GetDepartments() :List&amp;lt;Department" vertex="1">
+          <mxGeometry height="40" width="180" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-73" parent="3MW-sOkPAS2grmwaOfTg-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Delete(Department department) : void" vertex="1">
+          <mxGeometry height="40" width="180" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-74" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentDeleteService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2642.5" y="2759" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-75" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="3005" y="2914" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-76" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-66" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="3MW-sOkPAS2grmwaOfTg-74" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2930" y="2889" as="sourcePoint" />
+            <mxPoint x="3090" y="2889" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-77" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.499;entryY=1.072;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3063" y="3236.13" as="sourcePoint" />
+            <mxPoint x="3062.8" y="3189.002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-78" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-75" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3054" y="2939" as="sourcePoint" />
+            <mxPoint x="3060" y="3144" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-79" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-75" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-67" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3070" y="2959" as="sourcePoint" />
+            <mxPoint x="3070" y="3154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-81" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.466;entryY=1.071;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" target="3MW-sOkPAS2grmwaOfTg-73" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2732.5" y="3189.0000000000005" as="sourcePoint" />
+            <mxPoint x="3070" y="3154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-82" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2970" y="3164.0000000000005" as="sourcePoint" />
+            <mxPoint x="2830" y="3214.0000000000005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-83" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="2538" y="3330" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-84" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-83" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2551" y="3348" as="sourcePoint" />
+            <mxPoint x="2560.6400000000003" y="3281.574" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-85" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.909;exitY=-0.026;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2447.34" y="3325.4" as="sourcePoint" />
+            <mxPoint x="2445" y="3279" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-86" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2395" y="3127" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-87" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2492" y="3237" as="sourcePoint" />
+            <mxPoint x="2491.73" y="3177" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-88" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-69" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2590" y="3159" as="sourcePoint" />
+            <mxPoint x="2650" y="3109" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-89" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;ILogger&amp;lt;T&amp;gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="2160" y="2569" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-90" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentDeleteController" vertex="1">
+          <mxGeometry height="370" width="260" x="2345" y="2539" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-91" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _logger&lt;div&gt;&amp;nbsp;:ILogger&amp;lt;DeparatmentDeleteController&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-92" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentDeleteService&lt;div&gt;:IDeparatmentDeleteService型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-93" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- _adapter&lt;/div&gt;&lt;div&gt;:DeparatmentDeleteViewModelAdapter型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-94" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _deptDataStore&lt;div&gt;:TempDataStore&amp;lt;DeparatmentDeleteViewModel&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-95" parent="3MW-sOkPAS2grmwaOfTg-90" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-96" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Enter() :&amp;nbsp;IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-97" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Confirm(DepartmentDeleteViewModel viewModel) :IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-98" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Register(DepartmentDeleteViewModel viewModel):IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-99" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Complete():IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-100" parent="3MW-sOkPAS2grmwaOfTg-90" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Back(DepartmentDeleteViewModel viewModel):IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-101" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-74" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-91" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2600" y="3071" as="sourcePoint" />
+            <mxPoint x="2660" y="3021" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-102" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-89" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-91" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2653" y="2734" as="sourcePoint" />
+            <mxPoint x="2600" y="2727" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-103" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentRegisterViewModelAdapter" vertex="1">
+          <mxGeometry height="74" width="290" x="2324" y="2977" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-104" parent="3MW-sOkPAS2grmwaOfTg-103" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Restore(DepartmentRegisterViewModel target)&lt;div&gt;&amp;nbsp;: Department&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;※Domain Object型&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-105" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-103" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.488;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="3MW-sOkPAS2grmwaOfTg-100" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2600" y="3169" as="sourcePoint" />
+            <mxPoint x="2472" y="2929" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-106" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="2324" y="3330" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-108" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="2402.5" y="3239" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-110" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=31;" value="部署削除" vertex="1">
+          <mxGeometry height="30" width="270" x="2020" y="2446" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-111" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeShowService" vertex="1">
+          <mxGeometry height="190" width="180" x="1607" y="1636" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-112" parent="3MW-sOkPAS2grmwaOfTg-111" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- AppDbContext _context :AppDbContext型&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-113" parent="3MW-sOkPAS2grmwaOfTg-111" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeRepository&lt;div&gt;:IEmployeeRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-114" parent="3MW-sOkPAS2grmwaOfTg-111" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentRepository&lt;div&gt;:IDepartmentRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-115" parent="3MW-sOkPAS2grmwaOfTg-111" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-116" parent="3MW-sOkPAS2grmwaOfTg-111" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ GetEmployees() :List&amp;lt;Employee&amp;gt;" vertex="1">
+          <mxGeometry height="36" width="180" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-119" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;IEmployeeShowService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1599.5" y="1511" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-120" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="1962" y="1666" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-121" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-111" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="3MW-sOkPAS2grmwaOfTg-119" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1887" y="1641" as="sourcePoint" />
+            <mxPoint x="2047" y="1641" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-122" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.499;entryY=1.072;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2020" y="1988.13" as="sourcePoint" />
+            <mxPoint x="2019.8000000000002" y="1941.002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-123" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-120" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2011" y="1691" as="sourcePoint" />
+            <mxPoint x="2017" y="1896" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-124" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-120" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-112" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2027" y="1711" as="sourcePoint" />
+            <mxPoint x="2027" y="1906" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-125" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IEmployeeRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1592" y="1941" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-126" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-125" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-116" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2027" y="1716" as="sourcePoint" />
+            <mxPoint x="1690.8799999999997" y="1898.8400000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-127" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-155" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-125" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1907" y="1971" as="sourcePoint" />
+            <mxPoint x="1707" y="1571" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-128" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="1473" y="2100" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-129" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1508" y="2100" as="sourcePoint" />
+            <mxPoint x="1517.64" y="2033.574" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-130" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.909;exitY=-0.026;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1404.34" y="2077.4" as="sourcePoint" />
+            <mxPoint x="1402" y="2031" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-131" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1352" y="1879" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-132" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1449" y="1989" as="sourcePoint" />
+            <mxPoint x="1448.73" y="1929" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-133" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-114" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1547" y="1911" as="sourcePoint" />
+            <mxPoint x="1607.0000000000002" y="1861" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-134" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;ILogger&amp;lt;T&amp;gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="1100" y="1317" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-135" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeShowController" vertex="1">
+          <mxGeometry height="224" width="260" x="1302" y="1291" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-136" parent="3MW-sOkPAS2grmwaOfTg-135" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _logger&lt;div&gt;&amp;nbsp;:ILogger&amp;lt;EmployeeRegisterController&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-137" parent="3MW-sOkPAS2grmwaOfTg-135" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeShowService&lt;div&gt;:IEmployeeShowService型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-138" parent="3MW-sOkPAS2grmwaOfTg-135" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- _adapter&lt;/div&gt;&lt;div&gt;:EmployeeShowViewModelAdapter型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-139" parent="3MW-sOkPAS2grmwaOfTg-135" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _empDataStore&lt;div&gt;:TempDataStore&amp;lt;EmployeeShowViewModel&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-140" parent="3MW-sOkPAS2grmwaOfTg-135" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-141" parent="3MW-sOkPAS2grmwaOfTg-135" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Show() :&amp;nbsp;IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-146" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-119" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1557" y="1823" as="sourcePoint" />
+            <mxPoint x="1570" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-147" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-134" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-136" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1610" y="1486" as="sourcePoint" />
+            <mxPoint x="1557" y="1479" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-148" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeShowViewModelAdapter" vertex="1">
+          <mxGeometry height="74" width="270" x="1297" y="1560" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-149" parent="3MW-sOkPAS2grmwaOfTg-148" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Convert(Employee target):EmployeeShowViewModel&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-150" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-148" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-141" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1557" y="1921" as="sourcePoint" />
+            <mxPoint x="1428.88" y="1661" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-151" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=31;" value="社員一覧" vertex="1">
+          <mxGeometry height="30" width="270" x="860" y="1261" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-152" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="1281" y="2082" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-153" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="1940" y="1987.13" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-154" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="1359.5" y="1991" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-155" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="1927" y="1896" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-200" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=31;" value="部署一覧" vertex="1">
+          <mxGeometry height="30" width="270" x="2090" y="1261" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-201" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeRegisterService" vertex="1">
+          <mxGeometry height="260" width="180" x="1470" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-202" parent="3MW-sOkPAS2grmwaOfTg-201" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- AppDbContext _context :AppDbContext型&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-203" parent="3MW-sOkPAS2grmwaOfTg-201" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeRepository&lt;div&gt;:IEmployeeRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-204" parent="3MW-sOkPAS2grmwaOfTg-201" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentRepository&lt;div&gt;:IDepartmentRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-205" parent="3MW-sOkPAS2grmwaOfTg-201" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-206" parent="3MW-sOkPAS2grmwaOfTg-201" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ GetById(int id): Department" vertex="1">
+          <mxGeometry height="26" width="180" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-207" parent="3MW-sOkPAS2grmwaOfTg-201" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;GetDepartments() :List&amp;lt;Department" vertex="1">
+          <mxGeometry height="40" width="180" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-208" parent="3MW-sOkPAS2grmwaOfTg-201" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Register(Employee employee) : void" vertex="1">
+          <mxGeometry height="40" width="180" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-209" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;IEmployeeRegisterService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1462.5" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-210" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="1825" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-211" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-201" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="3MW-sOkPAS2grmwaOfTg-209" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1750" y="560" as="sourcePoint" />
+            <mxPoint x="1910" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-212" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.499;entryY=1.072;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1883" y="907.1300000000001" as="sourcePoint" />
+            <mxPoint x="1882.8000000000002" y="860.0020000000004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-213" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-210" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1874" y="610" as="sourcePoint" />
+            <mxPoint x="1880" y="815" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-214" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-210" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-202" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1890" y="630" as="sourcePoint" />
+            <mxPoint x="1890" y="825" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-215" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IEmployeeRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1455" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-216" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-215" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.466;entryY=1.071;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" target="3MW-sOkPAS2grmwaOfTg-208" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1890" y="635" as="sourcePoint" />
+            <mxPoint x="1890" y="825" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-217" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-245" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-215" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1770" y="890" as="sourcePoint" />
+            <mxPoint x="1570" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-218" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="1336" y="1019" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-219" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1371" y="1019" as="sourcePoint" />
+            <mxPoint x="1380.64" y="952.5740000000005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-220" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.909;exitY=-0.026;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1267.34" y="996.3999999999996" as="sourcePoint" />
+            <mxPoint x="1265" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-221" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="1215" y="798" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-222" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1312" y="908" as="sourcePoint" />
+            <mxPoint x="1311.73" y="848" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-223" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-204" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1410" y="830" as="sourcePoint" />
+            <mxPoint x="1470.0000000000002" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-224" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;ILogger&amp;lt;T&amp;gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="990" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-225" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeRegisterController" vertex="1">
+          <mxGeometry height="370" width="260" x="1165" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-226" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _logger&lt;div&gt;&amp;nbsp;:ILogger&amp;lt;EmployeeRegisterController&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-227" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeRegisterService&lt;div&gt;:IEmployeeRegisterService型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-228" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- _adapter&lt;/div&gt;&lt;div&gt;:EmployeeRegisterViewModelAdapter型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-229" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _empDataStore&lt;div&gt;:TempDataStore&amp;lt;EmployeeRegisterViewModel&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-230" parent="3MW-sOkPAS2grmwaOfTg-225" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-231" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Enter() :&amp;nbsp;IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-232" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Confirm(EmployeeRegisterViewModel viewModel) :IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-233" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Register(EmployeeRegisterViewModel viewModel):IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-234" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Complete():IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-235" parent="3MW-sOkPAS2grmwaOfTg-225" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Back(EmployeeRegisterViewModel viewModel):IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-236" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-209" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-226" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1420" y="742" as="sourcePoint" />
+            <mxPoint x="1480" y="692" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-237" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-224" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-226" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1473" y="405" as="sourcePoint" />
+            <mxPoint x="1420" y="398" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-238" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeRegisterViewModelAdapter" vertex="1">
+          <mxGeometry height="74" width="270" x="1155" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-239" parent="3MW-sOkPAS2grmwaOfTg-238" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Restore(EmployeeRegisterViewModel target)&lt;div&gt;&amp;nbsp;: Employee&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;※Domain Object型&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-240" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-238" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.488;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="3MW-sOkPAS2grmwaOfTg-235" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1420" y="840" as="sourcePoint" />
+            <mxPoint x="1292" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-241" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=31;" value="社員登録" vertex="1">
+          <mxGeometry height="30" width="270" x="880" y="101" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-242" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="1144" y="1001" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-243" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="1803" y="906.1300000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-244" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="1222.5" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-245" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="1790" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-246" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentRegisterService" vertex="1">
+          <mxGeometry height="260" width="180" x="2583" y="583" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-247" parent="3MW-sOkPAS2grmwaOfTg-246" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- AppDbContext _context :AppDbContext型&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-248" parent="3MW-sOkPAS2grmwaOfTg-246" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeRepository&lt;div&gt;:IEmployeeRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-249" parent="3MW-sOkPAS2grmwaOfTg-246" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentRepository&lt;div&gt;:IDepartmentRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-250" parent="3MW-sOkPAS2grmwaOfTg-246" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-251" parent="3MW-sOkPAS2grmwaOfTg-246" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ GetById(int id): Department" vertex="1">
+          <mxGeometry height="26" width="180" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-252" parent="3MW-sOkPAS2grmwaOfTg-246" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;GetDepartments() :List&amp;lt;Department" vertex="1">
+          <mxGeometry height="40" width="180" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-253" parent="3MW-sOkPAS2grmwaOfTg-246" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Register(Department department) : void" vertex="1">
+          <mxGeometry height="40" width="180" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-254" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRegisterService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2575.5" y="458" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-255" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="2938" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-256" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-246" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="3MW-sOkPAS2grmwaOfTg-254" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2863" y="588" as="sourcePoint" />
+            <mxPoint x="3023" y="588" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-257" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.499;entryY=1.072;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2996" y="930.1300000000001" as="sourcePoint" />
+            <mxPoint x="2995.8" y="883.0020000000004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-258" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-255" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2987" y="638" as="sourcePoint" />
+            <mxPoint x="2993" y="843" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-259" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-255" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-247" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3003" y="658" as="sourcePoint" />
+            <mxPoint x="3003" y="853" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-260" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2568" y="888" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-261" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-260" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.466;entryY=1.071;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" target="3MW-sOkPAS2grmwaOfTg-253" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3003" y="663" as="sourcePoint" />
+            <mxPoint x="3003" y="853" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-262" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-289" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-260" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2883" y="918" as="sourcePoint" />
+            <mxPoint x="2683" y="518" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-263" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="2449" y="1047" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-264" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2484" y="1047" as="sourcePoint" />
+            <mxPoint x="2493.6400000000003" y="980.5740000000005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-265" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.909;exitY=-0.026;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2380.34" y="1024.3999999999996" as="sourcePoint" />
+            <mxPoint x="2378" y="978" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-266" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2328" y="826" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-267" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2425" y="936" as="sourcePoint" />
+            <mxPoint x="2424.73" y="876" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-268" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-249" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2523" y="858" as="sourcePoint" />
+            <mxPoint x="2583" y="808" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-269" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;ILogger&amp;lt;T&amp;gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="2103" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-270" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentRegisterController" vertex="1">
+          <mxGeometry height="370" width="260" x="2278" y="238" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-271" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _logger&lt;div&gt;&amp;nbsp;:ILogger&amp;lt;DeparatmentRegisterController&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-272" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentRegisterService&lt;div&gt;:IDeparatmentRegisterService型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-273" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- _adapter&lt;/div&gt;&lt;div&gt;:DeparatmentRegisterViewModelAdapter型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-274" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _deptDataStore&lt;div&gt;:TempDataStore&amp;lt;DeparatmentRegisterViewModel&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-275" parent="3MW-sOkPAS2grmwaOfTg-270" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-276" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Enter() :&amp;nbsp;IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-277" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Confirm(DepartmentRegisterViewModel viewModel) :IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-278" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Register(DepartmentRegisterViewModel viewModel):IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-279" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Complete():IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-280" parent="3MW-sOkPAS2grmwaOfTg-270" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Back(DepartmentRegisterViewModel viewModel):IActionResult" vertex="1">
+          <mxGeometry height="40" width="260" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-281" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-254" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-271" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2533" y="770" as="sourcePoint" />
+            <mxPoint x="2593" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-282" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-269" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-271" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2586" y="433" as="sourcePoint" />
+            <mxPoint x="2533" y="426" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-283" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentRegisterViewModelAdapter" vertex="1">
+          <mxGeometry height="74" width="290" x="2268" y="698" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-284" parent="3MW-sOkPAS2grmwaOfTg-283" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Restore(DepartmentRegisterViewModel target)&lt;div&gt;&amp;nbsp;: Department&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;※Domain Object型&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-285" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-283" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.488;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="3MW-sOkPAS2grmwaOfTg-280" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2533" y="868" as="sourcePoint" />
+            <mxPoint x="2405" y="628" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-286" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="2257" y="1029" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-287" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="2916" y="929.1300000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-288" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="2335.5" y="938" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-289" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="2903" y="843" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-290" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=31;" value="部署登録" vertex="1">
+          <mxGeometry height="30" width="270" x="2120" y="107" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-291" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="TempDataStore" vertex="1">
+          <mxGeometry height="130" width="200" x="470" y="628" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-292" parent="3MW-sOkPAS2grmwaOfTg-291" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _key :string型&amp;nbsp;" vertex="1">
+          <mxGeometry height="24" width="200" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-294" parent="3MW-sOkPAS2grmwaOfTg-291" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-295" parent="3MW-sOkPAS2grmwaOfTg-291" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;Load(Controller controller);T?" vertex="1">
+          <mxGeometry height="28" width="200" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-296" parent="3MW-sOkPAS2grmwaOfTg-291" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+Save(Controller controller, T model);void" vertex="1">
+          <mxGeometry height="44" width="200" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-298" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="TempDataStore" vertex="1">
+          <mxGeometry height="40" width="130" x="1050" y="2619" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-299" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1180" y="2640" as="sourcePoint" />
+            <mxPoint x="1232" y="2638" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-301" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="TempDataStore" vertex="1">
+          <mxGeometry height="40" width="130" x="2160" y="2630" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-302" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2290" y="2651" as="sourcePoint" />
+            <mxPoint x="2342" y="2649" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-305" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="TempDataStore" vertex="1">
+          <mxGeometry height="40" width="130" x="1110" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-306" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1240" y="1411" as="sourcePoint" />
+            <mxPoint x="1292" y="1409" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-309" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentShowService" vertex="1">
+          <mxGeometry height="190" width="180" x="2727" y="1674" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-310" parent="3MW-sOkPAS2grmwaOfTg-309" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- AppDbContext _context :AppDbContext型&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-311" parent="3MW-sOkPAS2grmwaOfTg-309" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_employeeRepository&lt;div&gt;:IEmployeeRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-312" parent="3MW-sOkPAS2grmwaOfTg-309" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentRepository&lt;div&gt;:IDepartmentRepository型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-313" parent="3MW-sOkPAS2grmwaOfTg-309" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-314" parent="3MW-sOkPAS2grmwaOfTg-309" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ GetEmployees() :List&amp;lt;Employee&amp;gt;" vertex="1">
+          <mxGeometry height="36" width="180" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-315" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentShowService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2719.5" y="1549" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-316" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="3082" y="1704" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-317" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-309" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="3MW-sOkPAS2grmwaOfTg-315" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3007" y="1679" as="sourcePoint" />
+            <mxPoint x="3167" y="1679" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-318" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.499;entryY=1.072;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3140" y="2026.13" as="sourcePoint" />
+            <mxPoint x="3139.8" y="1979.002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-319" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-316" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3131" y="1729" as="sourcePoint" />
+            <mxPoint x="3137" y="1934" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-320" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-316" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-310" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3147" y="1749" as="sourcePoint" />
+            <mxPoint x="3147" y="1944" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-322" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-314" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2809.5" y="1979" as="sourcePoint" />
+            <mxPoint x="2810.8799999999997" y="1936.8400000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-323" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3047" y="1954" as="sourcePoint" />
+            <mxPoint x="2907" y="2004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-324" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="AppDbContext" vertex="1">
+          <mxGeometry height="40" width="110" x="2593" y="2138" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-325" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2628" y="2138" as="sourcePoint" />
+            <mxPoint x="2637.6400000000003" y="2071.574" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-326" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.868;entryY=1.099;entryDx=0;entryDy=0;exitX=0.909;exitY=-0.026;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2524.34" y="2115.4" as="sourcePoint" />
+            <mxPoint x="2522" y="2069" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-327" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2472" y="1917" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-328" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2569" y="2027" as="sourcePoint" />
+            <mxPoint x="2568.73" y="1967" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-329" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-312" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2667" y="1949" as="sourcePoint" />
+            <mxPoint x="2727" y="1899" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-330" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;ILogger&amp;lt;T&amp;gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="2220" y="1355" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-331" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentShowController" vertex="1">
+          <mxGeometry height="224" width="260" x="2422" y="1329" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-332" parent="3MW-sOkPAS2grmwaOfTg-331" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _logger&lt;div&gt;&amp;nbsp;:ILogger&amp;lt;DepartmentRegisterController&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-333" parent="3MW-sOkPAS2grmwaOfTg-331" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp;_departmentShowService&lt;div&gt;:IDepartmentShowService型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-334" parent="3MW-sOkPAS2grmwaOfTg-331" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- _adapter&lt;/div&gt;&lt;div&gt;:DepartmentShowViewModelAdapter型&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="260" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-335" parent="3MW-sOkPAS2grmwaOfTg-331" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- _deptDataStore&lt;div&gt;:TempDataStore&amp;lt;DepartmentShowViewModel&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-336" parent="3MW-sOkPAS2grmwaOfTg-331" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-337" parent="3MW-sOkPAS2grmwaOfTg-331" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Show() :&amp;nbsp;IActionResult" vertex="1">
+          <mxGeometry height="26" width="260" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-338" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-315" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2677" y="1861" as="sourcePoint" />
+            <mxPoint x="2690" y="1438" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-339" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-330" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-332" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2730" y="1524" as="sourcePoint" />
+            <mxPoint x="2677" y="1517" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-340" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentShowViewModelAdapter" vertex="1">
+          <mxGeometry height="74" width="270" x="2417" y="1598" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-341" parent="3MW-sOkPAS2grmwaOfTg-340" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Convert(Department target):EmployeeShowViewModel&amp;nbsp;" vertex="1">
+          <mxGeometry height="44" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-342" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3MW-sOkPAS2grmwaOfTg-340" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="3MW-sOkPAS2grmwaOfTg-337" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2677" y="1959" as="sourcePoint" />
+            <mxPoint x="2548.88" y="1699" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-343" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="2401" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-345" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="2479.5" y="2029" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-347" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="TempDataStore" vertex="1">
+          <mxGeometry height="40" width="130" x="2230" y="1428" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-348" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="2360" y="1449" as="sourcePoint" />
+            <mxPoint x="2412" y="1447" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-352" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeRegisterViewModel" vertex="1">
+          <mxGeometry height="160" width="230" x="880" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-353" parent="3MW-sOkPAS2grmwaOfTg-352" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Name:string?" vertex="1">
+          <mxGeometry height="24" width="230" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-354" parent="3MW-sOkPAS2grmwaOfTg-352" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ DeptId:int?" vertex="1">
+          <mxGeometry height="30" width="230" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-355" parent="3MW-sOkPAS2grmwaOfTg-352" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+DeptName:string?" vertex="1">
+          <mxGeometry height="30" width="230" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-356" parent="3MW-sOkPAS2grmwaOfTg-352" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-357" parent="3MW-sOkPAS2grmwaOfTg-352" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ SetDepartments(List&amp;lt;Department&amp;gt; departments) : void" vertex="1">
+          <mxGeometry height="42" width="230" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-374" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeShowViewModel" vertex="1">
+          <mxGeometry height="160" width="260" x="1000" y="1561" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-375" parent="3MW-sOkPAS2grmwaOfTg-374" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Name:string?" vertex="1">
+          <mxGeometry height="24" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-376" parent="3MW-sOkPAS2grmwaOfTg-374" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ DeptId:int?" vertex="1">
+          <mxGeometry height="30" width="260" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-377" parent="3MW-sOkPAS2grmwaOfTg-374" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+DeptName:string?" vertex="1">
+          <mxGeometry height="30" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-378" parent="3MW-sOkPAS2grmwaOfTg-374" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-379" parent="3MW-sOkPAS2grmwaOfTg-374" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ SetDepartments(List&amp;lt;Department&amp;gt; departments) : void" vertex="1">
+          <mxGeometry height="42" width="260" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-406" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeDeleteViewModel" vertex="1">
+          <mxGeometry height="160" width="260" x="930" y="2950" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-407" parent="3MW-sOkPAS2grmwaOfTg-406" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Name:string?" vertex="1">
+          <mxGeometry height="24" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-408" parent="3MW-sOkPAS2grmwaOfTg-406" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ DeptId:int?" vertex="1">
+          <mxGeometry height="30" width="260" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-409" parent="3MW-sOkPAS2grmwaOfTg-406" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+DeptName:string?" vertex="1">
+          <mxGeometry height="30" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-410" parent="3MW-sOkPAS2grmwaOfTg-406" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-411" parent="3MW-sOkPAS2grmwaOfTg-406" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ SetDepartments(List&amp;lt;Department&amp;gt; departments) : void" vertex="1">
+          <mxGeometry height="42" width="260" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-413" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentRegisterViewModel" vertex="1">
+          <mxGeometry height="130" width="230" x="2027" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-414" parent="3MW-sOkPAS2grmwaOfTg-413" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Name:string?" vertex="1">
+          <mxGeometry height="24" width="230" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-415" parent="3MW-sOkPAS2grmwaOfTg-413" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Id:int?" vertex="1">
+          <mxGeometry height="30" width="230" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-417" parent="3MW-sOkPAS2grmwaOfTg-413" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-418" parent="3MW-sOkPAS2grmwaOfTg-413" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ SetDepartments(List&amp;lt;Department&amp;gt; departments) : void" vertex="1">
+          <mxGeometry height="42" width="230" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-419" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentShowViewModel" vertex="1">
+          <mxGeometry height="130" width="230" x="2160" y="1504" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-420" parent="3MW-sOkPAS2grmwaOfTg-419" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Name:string?" vertex="1">
+          <mxGeometry height="24" width="230" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-421" parent="3MW-sOkPAS2grmwaOfTg-419" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Id:int?" vertex="1">
+          <mxGeometry height="30" width="230" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-422" parent="3MW-sOkPAS2grmwaOfTg-419" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-423" parent="3MW-sOkPAS2grmwaOfTg-419" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ SetDepartments(List&amp;lt;Department&amp;gt; departments) : void" vertex="1">
+          <mxGeometry height="42" width="230" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-437" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2703" y="1984" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-438" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="3051" y="2025.13" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-439" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="3038" y="1939" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-449" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="«interface»&lt;br&gt;&lt;b&gt;IDepartmentRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="195" x="2630" y="3184" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-450" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntityAdapter" vertex="1">
+          <mxGeometry height="40" width="180" x="2978" y="3225.13" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-451" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentRepository" vertex="1">
+          <mxGeometry height="40" width="180" x="2965" y="3139" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-461" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentDomainObject" vertex="1">
+          <mxGeometry height="140" width="210.5" x="110" y="826" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-462" parent="3MW-sOkPAS2grmwaOfTg-461" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Id :int?" vertex="1">
+          <mxGeometry height="24" width="210.5" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-463" parent="3MW-sOkPAS2grmwaOfTg-461" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Name:strinng?" vertex="1">
+          <mxGeometry height="30" width="210.5" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-464" parent="3MW-sOkPAS2grmwaOfTg-461" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="210.5" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-465" parent="3MW-sOkPAS2grmwaOfTg-461" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ validateDepartmentName(string name) : void" vertex="1">
+          <mxGeometry height="52" width="210.5" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-466" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DepartmentEntity" vertex="1">
+          <mxGeometry height="88" width="210.5" x="110" y="1005" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-467" parent="3MW-sOkPAS2grmwaOfTg-466" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ DeptId :int?" vertex="1">
+          <mxGeometry height="24" width="210.5" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-468" parent="3MW-sOkPAS2grmwaOfTg-466" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ DpetName:strinng?" vertex="1">
+          <mxGeometry height="30" width="210.5" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-469" parent="3MW-sOkPAS2grmwaOfTg-466" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="210.5" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-470" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeDomainObject" vertex="1">
+          <mxGeometry height="150" width="210.5" x="420" y="824" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-471" parent="3MW-sOkPAS2grmwaOfTg-470" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Id :int?" vertex="1">
+          <mxGeometry height="24" width="210.5" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-472" parent="3MW-sOkPAS2grmwaOfTg-470" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Name:strinng?" vertex="1">
+          <mxGeometry height="30" width="210.5" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-473" parent="3MW-sOkPAS2grmwaOfTg-470" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Department :Department?" vertex="1">
+          <mxGeometry height="30" width="210.5" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-474" parent="3MW-sOkPAS2grmwaOfTg-470" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="210.5" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-475" parent="3MW-sOkPAS2grmwaOfTg-470" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ ValidateName(string name) : void" vertex="1">
+          <mxGeometry height="32" width="210.5" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-476" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EmployeeEntity" vertex="1">
+          <mxGeometry height="180" width="210.5" x="420" y="1001" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-477" parent="3MW-sOkPAS2grmwaOfTg-476" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ EmpId :int?" vertex="1">
+          <mxGeometry height="24" width="210.5" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-478" parent="3MW-sOkPAS2grmwaOfTg-476" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ EmpName:strinng?" vertex="1">
+          <mxGeometry height="30" width="210.5" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-479" parent="3MW-sOkPAS2grmwaOfTg-476" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ DeptId:int?" vertex="1">
+          <mxGeometry height="30" width="210.5" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-480" parent="3MW-sOkPAS2grmwaOfTg-476" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Department:DpartmentEntity?" vertex="1">
+          <mxGeometry height="30" width="210.5" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-481" parent="3MW-sOkPAS2grmwaOfTg-476" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="210.5" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-482" parent="3MW-sOkPAS2grmwaOfTg-476" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ ValidateName(string name) : void" vertex="1">
+          <mxGeometry height="32" width="210.5" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-483" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntity" vertex="1">
+          <mxGeometry height="40" width="114.5" x="2938" y="1005" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-484" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentDomainObject" vertex="1">
+          <mxGeometry height="40" width="167" x="2603.5" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-485" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeEntity" vertex="1">
+          <mxGeometry height="40" width="114.5" x="1804" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-486" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeDomainObject" vertex="1">
+          <mxGeometry height="40" width="167" x="1469.5" y="1002" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-487" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntity" vertex="1">
+          <mxGeometry height="40" width="114.5" x="3091" y="2087" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-488" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentDomainObject" vertex="1">
+          <mxGeometry height="40" width="167" x="2756.5" y="2089" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-489" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeEntity" vertex="1">
+          <mxGeometry height="40" width="114.5" x="1957" y="2082" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-490" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeDomainObject" vertex="1">
+          <mxGeometry height="40" width="167" x="1622.5" y="2084" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-491" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentEntity" vertex="1">
+          <mxGeometry height="40" width="114.5" x="3058.5" y="3295" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-492" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="DepartmentDomainObject" vertex="1">
+          <mxGeometry height="40" width="167" x="2724" y="3297" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-493" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeEntity" vertex="1">
+          <mxGeometry height="40" width="114.5" x="1924.5" y="3290" as="geometry" />
+        </mxCell>
+        <mxCell id="3MW-sOkPAS2grmwaOfTg-494" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="EmployeeDomainObject" vertex="1">
+          <mxGeometry height="40" width="167" x="1590" y="3292" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ye8X_gGfXiTbSgHJDV-N" name="ページ-2">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
