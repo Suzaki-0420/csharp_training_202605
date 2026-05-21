@@ -18,6 +18,12 @@ public class EmployeeEntity
     /// 従業員名
     /// </summary>
     public string EmpName { get; set; } = string.Empty;
+
+    [Column("email")]
+    public string Email { get; set; } = string.Empty;
+
+    [Column("phone")]
+    public string Phone { get; set; } = string.Empty;
     /// <summary>
     /// 所属部署Id(外部キー)
     /// </summary>

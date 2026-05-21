@@ -13,6 +13,17 @@ public class EmployeeRegisterViewModel
     [Display(Name = "氏名")]
     [Required(ErrorMessage = "{0}は入力必須です。")]
     public string? Name { get; set; } = string.Empty;
+
+    [Display(Name = "メールアドレス")]
+    [Required(ErrorMessage = "{0}は入力必須です。")]
+    [EmailAddress(ErrorMessage = "メールアドレスの形式で入力してください。")]
+
+    public string? Email { get; set; } = string.Empty;
+
+    [Display(Name = "電話番号")]
+    [Required(ErrorMessage = "{0}は入力必須です。")]
+    [RegularExpression(@"^0\d{1,4}-\d{1,4}-\d{4}$", ErrorMessage = "電話番号の形式（例: 03-1234-5678）で入力してください。")]
+    public string? Phone { get; set; } = string.Empty;
     /// <summary>
     /// 所属部署
     /// </summary>
