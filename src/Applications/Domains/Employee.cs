@@ -23,8 +23,6 @@ public class Employee
     public Employee(int? id, string name, string email, string phone, Department? department)
     {
         ValidateName(name);
-        IsValidMailAddress(email);
-        IsValidPhoneNumber(phone);
         Id = id;
         Name = name;
         Email = email;
@@ -49,39 +47,6 @@ public class Employee
             throw new DomainException("氏名は必須です");
         if (name.Length > MaxLength)
             throw new DomainException($"氏名は{MaxLength}文字以内で入力してください");
-    }
-
-    private void IsValidMailAddress(string address)
-    {
-        if (string.IsNullOrEmpty(address))
-        {
-            throw new DomainException("メールアドレスは必須です");
-        }
-
-        try
-        {
-            System.Net.Mail.MailAddress a =
-                new System.Net.Mail.MailAddress(address);
-        }
-        catch (FormatException)
-        {
-            throw new DomainException("メールアドレスの形式と合っていません");
-        }
-    }
-
-    private void IsValidPhoneNumber(string phonenumber)
-    {
-        if (string.IsNullOrEmpty(phonenumber))
-        {
-            throw new DomainException("電話番号は必須です");
-        }
-        bool isMatch = Regex.IsMatch(phonenumber, @"^\d{3}-\d{4}-\d{4}");
-
-        if (isMatch == false)
-        {
-            throw new DomainException("電話番号の形式と合っていません");
-        }
-
     }
 
     /// <summary>
