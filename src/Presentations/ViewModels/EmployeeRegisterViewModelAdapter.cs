@@ -1,6 +1,6 @@
-using WebApp_Sample.Applications.Adapters;
-using WebApp_Sample.Applications.Domains;
-namespace WebApp_Sample.Presentations.ViewModels;
+using csharp_training_202605.Applications.Adapters;
+using csharp_training_202605.Applications.Domains;
+namespace csharp_training_202605.Presentations.ViewModels;
 /// <summary>
 /// EmployeeRegisterViewModel(従業員登録ViewModel)を
 /// ドメインオブジェクト:Employeeに変換するアダプターインターフェイスの実装

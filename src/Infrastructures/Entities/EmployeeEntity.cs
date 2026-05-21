@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace WebApp_Sample.Infrastructures.Entities;
+namespace csharp_training_202605.Infrastructures.Entities;
 /// <summary>
 /// 従業員テーブル(employee)を扱うEntity Framework Coreのエンティティクラス
 /// </summary>

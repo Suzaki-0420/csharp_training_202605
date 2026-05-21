@@ -1,4 +1,4 @@
-namespace WebApp_Sample.Exceptions;
+namespace csharp_training_202605.Exceptions;
 
 public class DomainException : Exception
 {

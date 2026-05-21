@@ -1,4 +1,4 @@
-namespace WebApp_Sample.Exceptions;
+namespace csharp_training_202605.Exceptions;
 
 /// <summary>
 /// 内部エラーを表す例外クラス

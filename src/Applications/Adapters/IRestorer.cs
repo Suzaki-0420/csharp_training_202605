@@ -1,4 +1,4 @@
-namespace WebApp_Sample.Applications.Adapters;
+namespace csharp_training_202605.Applications.Adapters;
 /// <summary>
 /// 指定のクラス(TTarget)からドメインオブジェクト(TDomain)を復元するインターフェイス
 /// </summary>

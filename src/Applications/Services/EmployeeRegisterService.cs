@@ -1,8 +1,8 @@
-using WebApp_Sample.Applications.Repositories;
-using WebApp_Sample.Applications.Domains;
-using WebApp_Sample.Exceptions;
-using WebApp_Sample.Infrastructures.Context;
-namespace WebApp_Sample.Applications.Services.Impls;
+using csharp_training_202605.Applications.Repositories;
+using csharp_training_202605.Applications.Domains;
+using csharp_training_202605.Exceptions;
+using csharp_training_202605.Infrastructures.Context;
+namespace csharp_training_202605.Applications.Services.Impls;
 /// <summary>
 /// 従業員登録サービスインターフェイスの実装
 /// </summary>

@@ -1,7 +1,7 @@
-using WebApp_Sample.Applications.Adapters;
-using WebApp_Sample.Applications.Domains;
-using WebApp_Sample.Infrastructures.Entities;
-namespace WebApp_Sample.Infrastructures.Adapters;
+using csharp_training_202605.Applications.Adapters;
+using csharp_training_202605.Applications.Domains;
+using csharp_training_202605.Infrastructures.Entities;
+namespace csharp_training_202605.Infrastructures.Adapters;
 /// <summary>
 /// ドメインオブジェクト:EmployeeとEmployeeEntityの相互変換インターフェイスの実装
 /// </summary>
