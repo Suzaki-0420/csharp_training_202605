@@ -9,6 +9,7 @@ using csharp_training_202605.Infrastructures.Adapters;
 using csharp_training_202605.Infrastructures.Context;
 using csharp_training_202605.Infrastructures.Entities;
 using csharp_training_202605.Infrastructures.Repositories;
+using csharp_training_202605.tests.TestDoubles;
 
 using System;
 using System.Collections.Generic;
@@ -154,56 +155,4 @@ public sealed class EmployeeRepositoryTests
         Assert.AreEqual(phone, employee.Phone);
     }
 
-    private sealed class QueryableDbSet<TEntity> : DbSet<TEntity>, IQueryable<TEntity>, IEnumerable<TEntity>
-        where TEntity : class
-    {
-        private readonly IQueryable<TEntity> _queryable;
-
-        public QueryableDbSet(IEnumerable<TEntity> entities)
-        {
-            _queryable = entities.AsQueryable();
-        }
-
-        public override IEntityType EntityType => throw new NotSupportedException();
-
-        Type IQueryable.ElementType => _queryable.ElementType;
-
-        Expression IQueryable.Expression => _queryable.Expression;
-
-        IQueryProvider IQueryable.Provider => _queryable.Provider;
-
-        IEnumerator<TEntity> IEnumerable<TEntity>.GetEnumerator()
-        {
-            return _queryable.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return _queryable.GetEnumerator();
-        }
-    }
-
-    private sealed class ThrowingDbSet<TEntity> : DbSet<TEntity>, IQueryable<TEntity>, IEnumerable<TEntity>
-        where TEntity : class
-    {
-        private readonly IQueryable<TEntity> _queryable = Array.Empty<TEntity>().AsQueryable();
-
-        public override IEntityType EntityType => throw new NotSupportedException();
-
-        Type IQueryable.ElementType => _queryable.ElementType;
-
-        Expression IQueryable.Expression => _queryable.Expression;
-
-        IQueryProvider IQueryable.Provider => _queryable.Provider;
-
-        IEnumerator<TEntity> IEnumerable<TEntity>.GetEnumerator()
-        {
-            throw new InvalidOperationException("Database access failed.");
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new InvalidOperationException("Database access failed.");
-        }
-    }
 }
