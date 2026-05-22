@@ -81,7 +81,7 @@ public class DepartmentRepository : IDepartmentRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "従業員の永続化ができませんでした。", e);
+                "部署の永続化ができませんでした。", e);
         }
     }
 }

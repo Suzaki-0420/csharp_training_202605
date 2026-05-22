@@ -55,34 +55,14 @@ public sealed class EmployeeRepositoryTests
         //追加する従業員定義に必要なDpartmentのDomain Object
         var department = new Department(1, "営業部");
 
-        using var context = CreateContext(
-        new[]
-        {
-            new EmployeeEntity
-            {
-                EmpId = 1,
-                EmpName = "鈴木一郎",
-                Email = "ichiro@test.com",
-                Phone="090-0000-1111",
-                DeptId = 1,
-            },
-
-            new EmployeeEntity
-            {
-                EmpId = 2,
-                EmpName = "鈴木次郎",
-                Email = "ziro@test.com",
-                Phone="090-0000-2222",
-                DeptId = 1,
-            },
-        });
+        using var context = CreateContext(new ThrowingDbSet<EmployeeEntity>());
         var repository = CreateRepository(context);
 
         var addentity = new Employee("鈴木次郎", "ziro@test.com", "090-0000-2222", department);
 
         var exception = Assert.ThrowsException<InternalException>(() => repository.Create(addentity));
 
-        //Assert.IsInstanceOfType<InternalException>(exception.InnerException);
+        Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
     }
 
     [TestMethod]
@@ -141,7 +121,7 @@ public sealed class EmployeeRepositoryTests
     private static AppDbContext CreateContext(DbSet<EmployeeEntity> employees)
     {
         var options = new DbContextOptionsBuilder<AppDbContext>().Options;
-        return new AppDbContext(options)
+        return new TestAppDbContext(options)
         {
             Employees = employees,
         };

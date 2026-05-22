@@ -9,6 +9,7 @@ using csharp_training_202605.Infrastructures.Adapters;
 using csharp_training_202605.Infrastructures.Context;
 using csharp_training_202605.Infrastructures.Entities;
 using csharp_training_202605.Infrastructures.Repositories;
+using csharp_training_202605.tests.TestDoubles;
 
 namespace csharp_training_202605.Tests.Infrastructures.Repositories;
 
@@ -73,6 +74,56 @@ public sealed class DepartmentRepositoryTests
         Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
     }
 
+    [TestMethod]
+    public void Create_InternalException()
+    {
+        //追加する従業員定義に必要なDpartmentのDomain Object
+        var department = new Department(1, "営業部");
+
+        using var context = CreateContext(new ThrowingDbSet<DepartmentEntity>());
+        var repository = CreateRepository(context);
+
+        var addentity = new Department("営業部");
+
+        var exception = Assert.ThrowsException<InternalException>(() => repository.Create(addentity));
+
+        Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
+    }
+
+    [TestMethod]
+    public void Create_Success()
+    {
+
+        using var context = CreateContext(
+        new[]
+        {
+            new DepartmentEntity
+            {
+                DeptId=1,
+                DeptName="営業部"
+            },
+
+            new DepartmentEntity
+            {
+                DeptId=2,
+                DeptName="人事部"
+            },
+        });
+        var repository = CreateRepository(context);
+
+        //追加する従業員（Createの中でDomainObject→Entityに変換するので、ここではDomainObjectを作る）
+        var addentity = new Department("開発部");
+
+        repository.Create(addentity);
+
+        var departments = repository.FindAll();//DBから追加後の従業員リストを取得
+
+        Assert.AreEqual(3, departments.Count);
+        AssertDepartment(departments[0], 1, "営業部");
+        AssertDepartment(departments[1], 2, "人事部");
+        AssertDepartment(departments[2], 3, "開発部");
+    }
+
     private static DepartmentRepository CreateRepository(AppDbContext context)
     {
         return new DepartmentRepository(context, new DepartmentEntityAdapter());
@@ -86,7 +137,7 @@ public sealed class DepartmentRepositoryTests
     private static AppDbContext CreateContext(DbSet<DepartmentEntity> departments)
     {
         var options = new DbContextOptionsBuilder<AppDbContext>().Options;
-        return new AppDbContext(options)
+        return new TestAppDbContext(options)
         {
             Departments = departments,
         };
@@ -98,56 +149,4 @@ public sealed class DepartmentRepositoryTests
         Assert.AreEqual(name, department.Name);
     }
 
-    private sealed class QueryableDbSet<TEntity> : DbSet<TEntity>, IQueryable<TEntity>, IEnumerable<TEntity>
-        where TEntity : class
-    {
-        private readonly IQueryable<TEntity> _queryable;
-
-        public QueryableDbSet(IEnumerable<TEntity> entities)
-        {
-            _queryable = entities.AsQueryable();
-        }
-
-        public override IEntityType EntityType => throw new NotSupportedException();
-
-        Type IQueryable.ElementType => _queryable.ElementType;
-
-        Expression IQueryable.Expression => _queryable.Expression;
-
-        IQueryProvider IQueryable.Provider => _queryable.Provider;
-
-        IEnumerator<TEntity> IEnumerable<TEntity>.GetEnumerator()
-        {
-            return _queryable.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return _queryable.GetEnumerator();
-        }
-    }
-
-    private sealed class ThrowingDbSet<TEntity> : DbSet<TEntity>, IQueryable<TEntity>, IEnumerable<TEntity>
-        where TEntity : class
-    {
-        private readonly IQueryable<TEntity> _queryable = Array.Empty<TEntity>().AsQueryable();
-
-        public override IEntityType EntityType => throw new NotSupportedException();
-
-        Type IQueryable.ElementType => _queryable.ElementType;
-
-        Expression IQueryable.Expression => _queryable.Expression;
-
-        IQueryProvider IQueryable.Provider => _queryable.Provider;
-
-        IEnumerator<TEntity> IEnumerable<TEntity>.GetEnumerator()
-        {
-            throw new InvalidOperationException("Database access failed.");
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new InvalidOperationException("Database access failed.");
-        }
-    }
 }

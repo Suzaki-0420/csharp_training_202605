@@ -1,4 +1,5 @@
 using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -30,6 +31,7 @@ internal sealed class QueryableDbSet<TEntity> : DbSet<TEntity>, IQueryable<TEnti
 
     public override EntityEntry<TEntity> Add(TEntity entity)
     {
+        AssignGeneratedKey(entity);
         _entities.Add(entity);
         return null!;
     }
@@ -47,5 +49,32 @@ internal sealed class QueryableDbSet<TEntity> : DbSet<TEntity>, IQueryable<TEnti
     IEnumerator IEnumerable.GetEnumerator()
     {
         return Queryable.GetEnumerator();
+    }
+
+    private void AssignGeneratedKey(TEntity entity)
+    {
+        var keyProperty = typeof(TEntity)
+            .GetProperties()
+            .FirstOrDefault(property =>
+                Attribute.IsDefined(property, typeof(KeyAttribute)) &&
+                property.PropertyType == typeof(int));
+
+        if (keyProperty == null)
+        {
+            return;
+        }
+
+        var currentValue = (int)(keyProperty.GetValue(entity) ?? 0);
+        if (currentValue != 0)
+        {
+            return;
+        }
+
+        var maxValue = _entities
+            .Select(item => (int)(keyProperty.GetValue(item) ?? 0))
+            .DefaultIfEmpty()
+            .Max();
+
+        keyProperty.SetValue(entity, maxValue + 1);
     }
 }
