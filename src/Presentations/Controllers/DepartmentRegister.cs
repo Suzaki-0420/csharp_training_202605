@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using csharp_training_202605.Applications.Services;
 using csharp_training_202605.Presentations.ViewModels;
 namespace csharp_training_202605.Presentations.Controllers;
+
+using csharp_training_202605.Presentations.ViewModels;
 /// <summary>
 /// 従業員登録コントローラ
 /// </summary>
@@ -63,6 +65,7 @@ public class DepartmentRegisterController : Controller
 
         return View(viewModel);
     }
+
 
     /// <summary>
     /// 入力画面の[完了]ボタンクリックアクションメソッド

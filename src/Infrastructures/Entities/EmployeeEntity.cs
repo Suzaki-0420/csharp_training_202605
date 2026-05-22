@@ -24,9 +24,17 @@ public class EmployeeEntity
 
     [Column("phone")]
     public string Phone { get; set; } = string.Empty;
+
+    [Column("dept_id")]
+    public int? DeptId { get; set; }
     /// <summary>
     /// 所属部署Id(外部キー)
     /// </summary>
-    [Column("dept_id")]
-    public int? DeptId { get; set; }
+    [ForeignKey("DeptId")]
+    public DepartmentEntity? Department { get; set; }
+
+    public override string ToString()
+    {
+        return "Name=" + EmpName + ", DeptName=" + Department?.DeptName;
+    }
 }

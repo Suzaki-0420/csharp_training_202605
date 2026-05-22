@@ -54,14 +54,16 @@ public class EmployeeRepository : IEmployeeRepository
         try
         {
             var entities = _context.Employees
-                //.Include(e => e.Department) いったん部署名を入れずにIDで出す
+                .Include(e => e.Department) //いったん部署名を入れずにIDで出す
                 .ToList();
 
             var employees = new List<Employee>();
 
             foreach (var entity in entities)
             {
+                Console.WriteLine(entity);
                 var employee = _adapter.Restore(entity);
+                //Console.WriteLine(employee);
                 employees.Add(employee);
             }
 

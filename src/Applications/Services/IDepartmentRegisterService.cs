@@ -23,4 +23,5 @@ public interface IDepartmentRegisterService
     /// </summary>
     /// <param name="department"></param>
     void Register(Department department);
+
 }
