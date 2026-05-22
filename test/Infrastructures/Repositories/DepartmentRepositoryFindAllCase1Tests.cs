@@ -64,6 +64,22 @@ public sealed class DepartmentRepositoryTests
     }
 
     [TestMethod]
+    public void FindById_WhenAdapterIsBroken_ReturnException()
+    {
+        using var context = CreateContext(
+        [
+            new DepartmentEntity { DeptId = 1, DeptName = "営業部" },
+        ]);
+        var repository = CreateRepositoryForInternalException(context);
+
+
+        var exception = Assert.ThrowsException<InternalException>(() => repository.FindById(1));
+
+        Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
+    }
+
+
+    [TestMethod]
     public void FindAll_WhenDbSetThrows_WrapsExceptionInInternalException()
     {
         using var context = CreateContext(new ThrowingDbSet<DepartmentEntity>());
@@ -127,6 +143,11 @@ public sealed class DepartmentRepositoryTests
     private static DepartmentRepository CreateRepository(AppDbContext context)
     {
         return new DepartmentRepository(context, new DepartmentEntityAdapter());
+    }
+
+    private static DepartmentRepository CreateRepositoryForInternalException(AppDbContext context)
+    {
+        return new DepartmentRepository(context, null!);
     }
 
     private static AppDbContext CreateContext(IEnumerable<DepartmentEntity> entities)
