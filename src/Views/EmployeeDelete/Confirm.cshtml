@@ -1,0 +1,43 @@
+@using csharp_training_202605.Presentations.ViewModels
+@model EmployeeDeleteViewModel;
+@{
+    ViewData["Title"] = "従業員削除(確認)";
+}
+<h2 class="text-center mt-4">@ViewData["Title"]</h2>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-8">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        @*EmployeeDeleteViewModelのNameプロパティの値を表示する*@
+                        <td class="fw-bold">@Html.DisplayNameFor(m => m.Name)</td>
+                        <td>@Html.DisplayFor(m => m.Name)</td>
+                    </tr>
+                    <tr>
+                        @*EmployeeDeleteViewModelのDeptNameプロパティの値を表示する*@
+                        <td class="fw-bold">@Html.DisplayNameFor(m => m.DeptName)</td>
+                        <td>@Html.DisplayFor(m => m.DeptName)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <form>
+                @*POSTリクエスト(Delete/Back)に値を渡すためにhidden属性を使う*@
+                @*これがないと、次の画面で値が消えてしまう*@
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="Name" />
+                <input type="hidden" asp-for="DeptId" />
+                <input type="hidden" asp-for="DeptName" />
+                @*formaction/formmethod ボタンごとに送信先を変える*@
+                @*同じフォーム内で[登録]と[戻る]を分岐できる*@
+                <div class="text-center mt-4">
+                    <button type="submit" formaction="@Url.Action("Delete", "EmployeeDelete")" formmethod="post"
+                            class="btn btn-primary">削除</button>
+                    <button type="submit" formaction="@Url.Action("Back", "EmployeeDelete")" formmethod="post"
+                            class="btn btn-secondary">戻る</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

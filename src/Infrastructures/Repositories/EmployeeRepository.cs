@@ -75,4 +75,43 @@ public class EmployeeRepository : IEmployeeRepository
                 "従業員一覧を取得できませんでした。", e);
         }
     }
+
+    public Employee? FindById(int id)
+    {
+        try
+        {
+            var result = _context.Employees
+                .Include(e => e.Department)
+                .FirstOrDefault(i => i.EmpId == id);//ここでたくさんのEntityの集まりから1つにする
+
+            if (result == null)
+            {
+                return null;
+            }
+            return _adapter.Restore(result);
+        }
+        catch (Exception e)
+        {
+            throw new InternalException(
+                "指定された社員を取得できませんでした。", e);
+        }
+    }
+
+    //Deleteを追加
+    public void Delete(Employee employee)
+    {
+        Console.WriteLine($"リポジトリでのemployee：{employee}");
+        try
+        {
+            var entity = _context.Employees
+                .FirstOrDefault(e => e.EmpId == employee.Id.Value);
+            _context.Employees.Remove(entity);
+            _context.SaveChanges();
+        }
+        catch (Exception e)
+        {
+            throw new InternalException(
+                "従業員の削除ができませんでした。", e);
+        }
+    }
 }
