@@ -21,6 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="sql\init.sql">
+    <CopyToourputDirectory>Always</CopyToourputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\src\src.csproj" />
   </ItemGroup>
 
