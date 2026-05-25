@@ -21,7 +21,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="sql\init.sql">
+    <None Include="sql\exist.sql">
+    <CopyToourputDirectory>Always</CopyToourputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="sql\none.sql">
     <CopyToourputDirectory>Always</CopyToourputDirectory>
     </None>
   </ItemGroup>

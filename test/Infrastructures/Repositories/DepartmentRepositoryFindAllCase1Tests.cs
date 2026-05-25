@@ -14,7 +14,7 @@ using csharp_training_202605.tests.TestDoubles;
 namespace csharp_training_202605.Tests.Infrastructures.Repositories;
 
 [TestClass]
-public sealed class DepartmentRepositoryTests
+public sealed class DepartmentRepositoryTestsOld
 {
     [TestMethod]
     public void FindAll_ReturnsAllDepartments()

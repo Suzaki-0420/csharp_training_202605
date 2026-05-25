@@ -73,6 +73,8 @@ public static class DependencyExtension
         services.AddScoped<IDepartmentRegisterService, DepartmentRegisterService>();
         // 従業員一覧サービスインターフェイスの実装
         services.AddScoped<IEmployeeShowService, EmployeeShowService>();
+        // 部門一覧サービスインターフェイスの実装
+        services.AddScoped<IDepartmentShowService, DepartmentShowService>();
     }
 
 
@@ -107,6 +109,15 @@ public static class DependencyExtension
         services.AddScoped(
             provider =>
             new TempDataStore<EmployeeShowViewModel>("EmployeeShowViewModel")
+        );
+
+        // 部門一覧表示ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        services.AddScoped<DepartmentShowViewModelAdapter>();
+        // TempDataへのEmployeeRegisterViewの保存・復元するためのクラス
+        // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
+        services.AddScoped(
+            provider =>
+            new TempDataStore<DepartmentShowViewModel>("DepartmentShowViewModel")
         );
     }
 }
