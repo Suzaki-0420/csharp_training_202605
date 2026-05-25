@@ -24,5 +24,5 @@ public interface IDepartmentDeleteService
     /// <param name="employee"></param>
     void Delete(Department employee);
 
-    bool AffiliationCheck(int deptid);
+    bool AffiliationCheck(int? deptid);
 }

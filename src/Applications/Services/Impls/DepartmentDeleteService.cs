@@ -85,7 +85,7 @@ public class DepartmentDeleteService : IDepartmentDeleteService
         }
     }
 
-    public bool AffiliationCheck(int deptid)
+    public bool AffiliationCheck(int? deptid)
     {
         var employeesindepartment = _context.Employees
             .Where(e => e.DeptId == deptid)

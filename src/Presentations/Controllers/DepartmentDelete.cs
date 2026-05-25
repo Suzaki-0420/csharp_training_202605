@@ -104,12 +104,22 @@ public class DepartmentDeleteController : Controller
     [HttpPost("Delete")]
     public IActionResult Delete(DepartmentDeleteViewModel viewModel)
     {
+        bool judge = _departmentDeleteService.AffiliationCheck(viewModel.Id);
+
+        if (judge == true)
+        {
+            // DepartmentDeleteViewModelをシリアライズして、TempDataに保存する
+            _empDataStore.Save(this, viewModel);
+            // 登録処理GETアクションメソッドにリダイレクトする
+            return RedirectToAction("Complete");
+        }
+
+        else
+        {
+            return RedirectToAction("Error");
+        }
 
 
-        // DepartmentDeleteViewModelをシリアライズして、TempDataに保存する
-        _empDataStore.Save(this, viewModel);
-        // 登録処理GETアクションメソッドにリダイレクトする
-        return RedirectToAction("Complete");
     }
 
     /// <summary>
@@ -128,12 +138,20 @@ public class DepartmentDeleteController : Controller
             // データが存在しない場合、入力画面にリダイレクト
             return RedirectToAction("Enter");
         }
-        // DepartmentDeleteFormをドメインモデル:Departmentに変換する
-        var department = _adapter.Restore(viewModel!);
-        Console.WriteLine($"Completeでのdepartment：{department}");
-        // 従業員を削除する
-        _departmentDeleteService.Delete(department);
-        return View(viewModel);
+        bool judge = _departmentDeleteService.AffiliationCheck(viewModel.Id);
+        if (judge == true)
+        {
+            var department = _adapter.Restore(viewModel!);
+            Console.WriteLine($"Completeでのdepartment：{department}");
+            // 従業員を削除する
+            _departmentDeleteService.Delete(department);
+            return View(viewModel);
+        }
+
+        else
+        {
+            return RedirectToAction("Enter");
+        }
     }
 
     /// <summary>
