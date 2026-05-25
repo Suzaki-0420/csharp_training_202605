@@ -71,14 +71,13 @@ public class DepartmentRepositoryTests
     {
         var adapter = new DepartmentEntityAdapter();
         var options = new DbContextOptionsBuilder<AppDbContext>()
-            .UseNpgsql("Host=localhost;Port=0000;Database=csharp_training_202605;Username=postgres;Password=training;")
             .Options;
 
         _context = new AppDbContext(options);
 
         var path = Path.Combine(AppContext.BaseDirectory, "sql", "exist.sql");
         var sql = File.ReadAllText(path);
-        _context.Database.ExecuteSqlRaw(sql);
+        //_context.Database.ExecuteSqlRaw(sql);
 
         _departmentrepository = new DepartmentRepository(_context, adapter);
 

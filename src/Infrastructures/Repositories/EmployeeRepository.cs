@@ -104,8 +104,8 @@ public class EmployeeRepository : IEmployeeRepository
         try
         {
             var entity = _context.Employees
-                .FirstOrDefault(e => e.EmpId == employee.Id.Value);
-            _context.Employees.Remove(entity);
+                .FirstOrDefault(e => e.EmpId == employee.Id!.Value);
+            _context.Employees.Remove(entity!);
             _context.SaveChanges();
         }
         catch (Exception e)

@@ -19,4 +19,6 @@ public interface IDepartmentRepository
     Department? FindById(int id);
 
     void Create(Department department);
+
+    void Delete(Department department);
 }

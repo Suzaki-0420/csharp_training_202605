@@ -84,4 +84,20 @@ public class DepartmentRepository : IDepartmentRepository
                 "部署の永続化ができませんでした。", e);
         }
     }
+
+    //Deleteを追加
+    public void Delete(Department department)
+    {
+        try
+        {
+            var entity = _adapter.Convert(department);
+            _context.Departments.Remove(entity);
+            _context.SaveChanges();
+        }
+        catch (Exception e)
+        {
+            throw new InternalException(
+                "部門の削除ができませんでした。", e);
+        }
+    }
 }
