@@ -49,6 +49,21 @@ public class EmployeeRepository : IEmployeeRepository
         }
     }
 
+    public void Renewal(Employee employee)
+    {
+        try
+        {
+            var entity = _adapter.Convert(employee);
+            _context.Employees.Update(entity);
+            _context.SaveChanges();
+        }
+        catch (Exception e)
+        {
+            throw new InternalException(
+                "従業員の変更ができませんでした。", e);
+        }
+    }
+
     public List<Employee> FindAll()
     {
         try

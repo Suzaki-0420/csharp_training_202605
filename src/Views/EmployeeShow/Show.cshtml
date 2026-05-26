@@ -16,6 +16,8 @@
                 <th>メールアドレス</th>
                 <th>電話番号</th>
                 <th>部署</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -27,14 +29,37 @@
                     <td>@employee.Email</td>
                     <td>@employee.Phone</td>
                     <td>@employee.DeptName</td>
+                    <td>
+                        <!-- 行ごとにフォームを作成し、POSTでオブジェクトを送信 -->
+                        <form asp-controller="EmployeeDelete" asp-action="Confirm" method="post" class="d-inline">
+                            <input type="hidden" name="Id" value="@employee.Id" />
+                            <input type="hidden" name="Name" value="@employee.Name" />
+                            <input type="hidden" name="Email" value="@employee.Email" />
+                            <input type="hidden" name="Phone" value="@employee.Phone" />
+                            <input type="hidden" name="DeptName" value="@employee.DeptName" />
+
+                            <button type="submit" class="btn btn-secondary">削除</button>
+                        </form>
+                    </td>
+                    <td>
+                        <!-- 行ごとにフォームを作成し、POSTでオブジェクトを送信 -->
+                        <form asp-controller="EmployeeUpdate" asp-action="Enter" method="post" class="d-inline">
+                            <input type="hidden" name="Id" value="@employee.Id" />
+                            <input type="hidden" name="Name" value="@employee.Name" />
+                            <input type="hidden" name="Email" value="@employee.Email" />
+                            <input type="hidden" name="Phone" value="@employee.Phone" />
+                            <input type="hidden" name="DeptName" value="@employee.DeptName" />
+
+                            <button type="submit" class="btn btn-danger">更新</button>
+                        </form>
+
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
-@* [戻る]ボタン *@
-<div class="d-flex justify-content-center">
-    <form method="get">
-        <button type="button" onclick="location.href='/'">戻る</button>
-    </form>
+@* 新規追加ボタン *@
+<div class="d-flex justify-content-center gap-3 my-4">
+    <a asp-controller="EmployeeRegister" asp-action="Enter" class="btn btn-primary">新規従業員の追加</a>
 </div>

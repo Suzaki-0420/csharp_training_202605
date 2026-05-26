@@ -5,42 +5,42 @@ namespace csharp_training_202605.Presentations.Controllers;
 /// <summary>
 /// 従業員登録コントローラ
 /// </summary>
-[Route("DepartmentDelete")]
-public class DepartmentDeleteController : Controller
+[Route("EmployeeUpdate")]
+public class EmployeeUpdateController : Controller
 {
     /// <summary>
     /// ロガー
     /// </summary>
-    private readonly ILogger<DepartmentDeleteController> _logger;
+    private readonly ILogger<EmployeeUpdateController> _logger;
     /// <summary>
     /// 従業員登録サービスインターフェイス
     /// </summary>
-    private readonly IDepartmentDeleteService _departmentDeleteService;
+    private readonly IEmployeeUpdateService _employeeUpdateService;
     /// <summary>
-    /// 従業員登録ViewModelをDepartmentに変換するアダプター
+    /// 従業員登録ViewModelをEmployeeに変換するアダプター
     /// </summary>
-    private readonly DepartmentDeleteViewModelAdapter _adapter;
+    private readonly EmployeeUpdateViewModelAdapter _adapter;
     /// <summary>
     /// TempDataを通じて一時的にViewModelを保存・復元するためのクラス
     /// </summary>
-    private readonly TempDataStore<DepartmentDeleteViewModel> _empDataStore;
+    private readonly TempDataStore<EmployeeUpdateViewModel> _empDataStore;
 
     /// <summary>
     /// コンストラクタ
     /// </summary>
     /// <param name="logger">ロガー</param>
-    /// <param name="departmentDeleteService">従業員登録サービスインターフェイス</param>
-    /// <param name="departmentDeleteViewModelAdapter">従業員登録ViewModelをDepartmentに変換するアダプター</param>
+    /// <param name="employeeUpdateService">従業員登録サービスインターフェイス</param>
+    /// <param name="employeeUpdateViewModelAdapter">従業員登録ViewModelをEmployeeに変換するアダプター</param>
     /// <param name="empDataStore">TempDataを通じて一時的にViewModelを保存・復元するためのクラス</param>
-    public DepartmentDeleteController(
-        ILogger<DepartmentDeleteController> logger,
-        IDepartmentDeleteService departmentDeleteService,
-        DepartmentDeleteViewModelAdapter departmentDeleteViewModelAdapter,
-        TempDataStore<DepartmentDeleteViewModel> empDataStore)
+    public EmployeeUpdateController(
+        ILogger<EmployeeUpdateController> logger,
+        IEmployeeUpdateService employeeUpdateService,
+        EmployeeUpdateViewModelAdapter employeeUpdateViewModelAdapter,
+        TempDataStore<EmployeeUpdateViewModel> empDataStore)
     {
         _logger = logger;
-        _departmentDeleteService = departmentDeleteService;
-        _adapter = departmentDeleteViewModelAdapter;
+        _employeeUpdateService = employeeUpdateService;
+        _adapter = employeeUpdateViewModelAdapter;
         _empDataStore = empDataStore;
     }
 
@@ -51,20 +51,18 @@ public class DepartmentDeleteController : Controller
     [HttpGet("Enter")]
     public IActionResult Enter()
     {
-        DepartmentDeleteViewModel? viewModel = null;
+        EmployeeUpdateViewModel? viewModel = null;
         // [戻る]ボタンへの対応
-        // TempDataからDepartmentDeleteViewModelを取得する
+        // TempDataからEmployeeUpdateViewModelを取得する
         viewModel = _empDataStore.Load(this);
         if (viewModel == null)
         {
             // 従業員登録ViewModelを生成する
-            viewModel = new DepartmentDeleteViewModel();
+            viewModel = new EmployeeUpdateViewModel();
         }
         // 部署一覧を取得してViewModelに設定する(SelectListItem形式)
         PopulateDepartments(viewModel);
         // viewModelをviewに渡して画面表示する
-        Console.WriteLine("中身チェック");
-        Console.WriteLine(viewModel);
         return View(viewModel);
     }
 
@@ -74,25 +72,39 @@ public class DepartmentDeleteController : Controller
     /// <param name="viewModel"></param>
     /// <returns></returns>
     [HttpPost("Confirm")]
-    public IActionResult Confirm(DepartmentDeleteViewModel viewModel)
+    public IActionResult Confirm(EmployeeUpdateViewModel viewModel)
     {
         // バリデーションチェック
         if (!ModelState.IsValid) // バリデーションエラーあり
         {
-            // 社員一覧を取得してViewModelに設定する(SelectListItem形式)
+            // 部署一覧を取得してViewModelに設定する(SelectListItem形式)
             PopulateDepartments(viewModel);
             // 入力画面の表示
             return View("Enter", viewModel);
         }
-        // 選択された社員のIdで社員データを取得する
-        var department = _departmentDeleteService.GetById(viewModel.Id ?? 0);
-        _logger.LogInformation($"部門Id:{viewModel.Id ?? 0}の部門を取得する");
+        // 選択された部署のIdで部署データを取得する
+        var department = _employeeUpdateService.GetById(viewModel.DeptId ?? 0);
+        _logger.LogInformation($"部署Id:{viewModel.DeptId ?? 0}の部署を取得する");
         // ViewModelに部署名を設定する
-        viewModel.Id = department.Id;
-        viewModel.Name = department.Name;
-        PopulateDepartments(viewModel);
+        viewModel.DeptName = department.Name;
 
+        bool emailjudge = _employeeUpdateService.EmailAffiliationCheck(viewModel.Email);
+        bool phonejudge = _employeeUpdateService.PhoneAffiliationCheck(viewModel.Phone);
 
+        if (emailjudge == false)
+        {
+            TempData["msg_email"] = "同じメールアドレスがすでに登録されています。";
+        }
+        if (phonejudge == false)
+        {
+            TempData["msg_phone"] = "同じ電話番号がすでに登録されています。";
+        }
+        if (emailjudge == false | phonejudge == false)
+        {
+            PopulateDepartments(viewModel);
+            return View("Enter", viewModel);
+        }
+        // 確認画面を表示する
         return View(viewModel);
     }
 
@@ -101,18 +113,11 @@ public class DepartmentDeleteController : Controller
     /// </summary>
     /// <param name="form"></param>
     /// <returns></returns>
-    [HttpPost("Delete")]
-    public IActionResult Delete(DepartmentDeleteViewModel viewModel)
+    [HttpPost("Regiter")]
+    public IActionResult Update(EmployeeUpdateViewModel viewModel)
     {
-        // EmployeeDeleteViewModelをシリアライズして、TempDataに保存する
+        // EmployeeUpdateViewModelをシリアライズして、TempDataに保存する
         _empDataStore.Save(this, viewModel);
-
-        bool judge = _departmentDeleteService.AffiliationCheck(viewModel.Id);
-        if (judge == false)
-        {
-            TempData["msg"] = "所属社員がいるため削除できません。";
-            return View("Confirm", viewModel);
-        }
         // 登録処理GETアクションメソッドにリダイレクトする
         return RedirectToAction("Complete");
     }
@@ -125,18 +130,18 @@ public class DepartmentDeleteController : Controller
     [HttpGet("Complete")]
     public IActionResult Complete()
     {
-        DepartmentDeleteViewModel? viewModel = null;
-        // TempDataからDepartmentDeleteViewModelを取得する
+        EmployeeUpdateViewModel? viewModel = null;
+        // TempDataからEmployeeUpdateViewModelを取得する
         viewModel = _empDataStore.Load(this);
         if (viewModel == null)
         {
             // データが存在しない場合、入力画面にリダイレクト
             return RedirectToAction("Enter");
         }
-        var department = _adapter.Restore(viewModel!);
-        Console.WriteLine($"Completeでのdepartment：{department}");
-        // 従業員を削除する
-        _departmentDeleteService.Delete(department);
+        // EmployeeUpdateFormをドメインモデル:Employeeに変換する
+        var employee = _adapter.Restore(viewModel!);
+        // 新しい従業員を登録する
+        _employeeUpdateService.Update(employee);
         return View(viewModel);
     }
 
@@ -145,10 +150,10 @@ public class DepartmentDeleteController : Controller
     /// </summary>
     /// <returns></returns> 
     [HttpPost("Back")]
-    public IActionResult Back(DepartmentDeleteViewModel viewModel)
+    public IActionResult Back(EmployeeUpdateViewModel viewModel)
     {
         _logger.LogInformation("[戻る]ボタンクリック:{0}", viewModel!.ToString());
-        // DepartmentDeleteViewModelをシリアライズして、TempDataに保存する
+        // EmployeeUpdateViewModelをシリアライズして、TempDataに保存する
         _empDataStore.Save(this, viewModel);
         // 入力画面を出力するアクションメソッドにリダイレクトする
         return RedirectToAction("Enter");
@@ -157,12 +162,12 @@ public class DepartmentDeleteController : Controller
     /// <summary>
     /// 部署一覧を取得してViewModelに設定する(SelectListItem形式)
     /// </summary>
-    private void PopulateDepartments(DepartmentDeleteViewModel viewModel)
+    private void PopulateDepartments(EmployeeUpdateViewModel viewModel)
     {
         // 従業員登録サービスから部署一覧を取得する
-        var departments = _departmentDeleteService.GetDepartments();
-        // 社員情報をDepartmentDeleteViewModelに登録する
+        var departments = _employeeUpdateService.GetDepartments();
+        // 部署一覧をEmployeeUpdateViewModelに登録する
         viewModel.SetDepartments(departments);
-        _logger.LogInformation("社員リストを設定");
+        _logger.LogInformation("部署リストを設定");
     }
 }

@@ -34,8 +34,7 @@
                 <div class="text-center mt-4">
                     <button type="submit" formaction="@Url.Action("Delete", "EmployeeDelete")" formmethod="post"
                             class="btn btn-primary">削除</button>
-                    <button type="submit" formaction="@Url.Action("Back", "EmployeeDelete")" formmethod="post"
-                            class="btn btn-secondary">戻る</button>
+                    <a asp-controller="EmployeeShow" asp-action="Show" class="btn btn-secondary">戻る</a>
                 </div>
             </form>
         </div>

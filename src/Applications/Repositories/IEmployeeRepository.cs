@@ -16,5 +16,6 @@ public interface IEmployeeRepository
     Employee? FindById(int id);
 
     void Delete(Employee employee);
+    void Renewal(Employee employee);
 }
 

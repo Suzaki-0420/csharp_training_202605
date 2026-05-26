@@ -4,6 +4,12 @@
     ViewData["Title"] = "部門削除(確認)";
 }
 <h2 class="text-center mt-4">@ViewData["Title"]</h2>
+@if (TempData[key: "msg"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["msg"]
+    </div>
+}
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-6 col-sm-8">
@@ -28,8 +34,7 @@
                 <div class="text-center mt-4">
                     <button type="submit" formaction="@Url.Action("Delete", "DepartmentDelete")" formmethod="post"
                             class="btn btn-primary">削除</button>
-                    <button type="submit" formaction="@Url.Action("Back", "DepartmentDelete")" formmethod="post"
-                            class="btn btn-secondary">戻る</button>
+                    <a asp-controller="DepartmentShow" asp-action="Show" class="btn btn-secondary">戻る</a>
                 </div>
             </form>
         </div>

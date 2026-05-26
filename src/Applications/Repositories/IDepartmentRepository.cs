@@ -20,5 +20,6 @@ public interface IDepartmentRepository
 
     void Create(Department department);
 
+
     void Delete(Department department);
 }

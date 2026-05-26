@@ -13,22 +13,30 @@
             <tr>
                 <th>部門ID</th>
                 <th>部門名</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var employee in Model)
+            @foreach (var department in Model)
             {
                 <tr>
-                    <td>@employee.Id</td>
-                    <td>@employee.Name</td>
+                    <td>@department.Id</td>
+                    <td>@department.Name</td>
+                    <td>
+                        <!-- 行ごとにフォームを作成し、POSTでオブジェクトを送信 -->
+                        <form asp-controller="DepartmentDelete" asp-action="Confirm" method="post" class="d-inline">
+                            <input type="hidden" name="Id" value="@department.Id" />
+                            <input type="hidden" name="Name" value="@department.Name" />
+
+                            <button type="submit" class="btn btn-secondary">削除</button>
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
-@* [戻る]ボタン *@
-<div class="d-flex justify-content-center">
-    <form method="get">
-        <button type="button" onclick="location.href='/'">戻る</button>
-    </form>
+@* 新規追加ボタン *@
+<div class="d-flex justify-content-center gap-3 my-4">
+    <a asp-controller="DepartmentRegister" asp-action="Enter" class="btn btn-success">新規部門の追加</a>
 </div>
