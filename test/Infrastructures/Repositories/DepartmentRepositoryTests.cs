@@ -11,7 +11,7 @@ namespace csharp_training_202605.Test.Infrastructures.Repositories;
 
 [DoNotParallelize]
 [TestClass]
-public class RightExistTest
+public class DepartmentRightExistTest
 {
     private const string ConnectionString =
         "Host=localhost;Port=5432;Database=csharp_training_202605;Username=postgres;Password=training;";
@@ -97,7 +97,7 @@ public class RightExistTest
 
 [DoNotParallelize]
 [TestClass]
-public class ExceptionsTest
+public class DepartmentExceptionsTest
 {
     private const string ConnectionString =
         "Host=localhost;Port=5432;Database=csharp_training_202605;Username=postgres;Password=training;";
@@ -152,7 +152,7 @@ public class ExceptionsTest
     public void Department_Delete_Exception()
     {
         var deleteentity = new Department(1, "総務部");
-        var exception = Assert.ThrowsException<InternalException>(() => _departmentrepository.Create(deleteentity));
+        var exception = Assert.ThrowsException<InternalException>(() => _departmentrepository.Delete(deleteentity));
 
         Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
     }
@@ -160,7 +160,7 @@ public class ExceptionsTest
 
 [DoNotParallelize]
 [TestClass]
-public class RightNoneTest
+public class DepartmentRightNoneTest
 {
     private const string ConnectionString =
         "Host=localhost;Port=5432;Database=csharp_training_202605;Username=postgres;Password=training;";
