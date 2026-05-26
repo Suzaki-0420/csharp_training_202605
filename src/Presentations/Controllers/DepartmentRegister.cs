@@ -81,6 +81,14 @@ public class DepartmentRegisterController : Controller
             // 入力画面の表示
             return View("Enter", viewModel);
         }
+        bool judge = _departmentRegisterService.AffiliationCheck(viewModel.Name);
+        if (judge == false)
+        {
+            TempData["msg"] = "同じ名前の部署がすでに存在しています。";
+            return View("Enter", viewModel);
+        }
+
+
         return View(viewModel);
     }
 

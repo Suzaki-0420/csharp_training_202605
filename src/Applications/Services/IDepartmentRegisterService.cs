@@ -24,4 +24,6 @@ public interface IDepartmentRegisterService
     /// <param name="department"></param>
     void Register(Department department);
 
+    bool AffiliationCheck(string? deptname);
+
 }

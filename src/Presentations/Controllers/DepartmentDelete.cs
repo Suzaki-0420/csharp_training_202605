@@ -85,14 +85,21 @@ public class DepartmentDeleteController : Controller
             return View("Enter", viewModel);
         }
         // 選択された社員のIdで社員データを取得する
-        Console.WriteLine(viewModel.Id);
         var department = _departmentDeleteService.GetById(viewModel.Id ?? 0);
-        Console.WriteLine($"コントローラーのConfirm：{department}");
         _logger.LogInformation($"部門Id:{viewModel.Id ?? 0}の部門を取得する");
         // ViewModelに部署名を設定する
-        Console.WriteLine(department);
         viewModel.Id = department.Id;
         viewModel.Name = department.Name;
+
+        bool judge = _departmentDeleteService.AffiliationCheck(viewModel.Id);
+        if (judge == false)
+        {
+            TempData["msg"] = "所属社員がいるため削除できません。";
+            ModelState.AddModelError("", "所属社員がいるため削除できません。");
+            PopulateDepartments(viewModel);
+            return View("Enter", viewModel);
+        }
+
         return View(viewModel);
     }
 
@@ -104,22 +111,10 @@ public class DepartmentDeleteController : Controller
     [HttpPost("Delete")]
     public IActionResult Delete(DepartmentDeleteViewModel viewModel)
     {
-        bool judge = _departmentDeleteService.AffiliationCheck(viewModel.Id);
-
-        if (judge == true)
-        {
-            // DepartmentDeleteViewModelをシリアライズして、TempDataに保存する
-            _empDataStore.Save(this, viewModel);
-            // 登録処理GETアクションメソッドにリダイレクトする
-            return RedirectToAction("Complete");
-        }
-
-        else
-        {
-            return RedirectToAction("Error");
-        }
-
-
+        // EmployeeDeleteViewModelをシリアライズして、TempDataに保存する
+        _empDataStore.Save(this, viewModel);
+        // 登録処理GETアクションメソッドにリダイレクトする
+        return RedirectToAction("Complete");
     }
 
     /// <summary>
@@ -138,20 +133,11 @@ public class DepartmentDeleteController : Controller
             // データが存在しない場合、入力画面にリダイレクト
             return RedirectToAction("Enter");
         }
-        bool judge = _departmentDeleteService.AffiliationCheck(viewModel.Id);
-        if (judge == true)
-        {
-            var department = _adapter.Restore(viewModel!);
-            Console.WriteLine($"Completeでのdepartment：{department}");
-            // 従業員を削除する
-            _departmentDeleteService.Delete(department);
-            return View(viewModel);
-        }
-
-        else
-        {
-            return RedirectToAction("Enter");
-        }
+        var department = _adapter.Restore(viewModel!);
+        Console.WriteLine($"Completeでのdepartment：{department}");
+        // 従業員を削除する
+        _departmentDeleteService.Delete(department);
+        return View(viewModel);
     }
 
     /// <summary>

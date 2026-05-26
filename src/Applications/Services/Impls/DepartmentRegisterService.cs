@@ -84,4 +84,19 @@ public class DepartmentRegisterService : IDepartmentRegisterService
             throw;
         }
     }
+
+    public bool AffiliationCheck(string? deptname)
+    {
+        var samedepartment = _context.Departments
+            .Where(d => d.DeptName == deptname)
+            .ToList();
+        if (samedepartment.Count == 0)
+        {
+            return true; //部署追加OK
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

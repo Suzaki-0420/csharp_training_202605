@@ -94,7 +94,7 @@ public class EmployeeDeleteController : Controller
         Console.WriteLine(employee);
         viewModel.Id = employee.Id;
         viewModel.Name = employee.Name;
-        viewModel.DeptId = employee.Department.Id;
+        viewModel.DeptId = employee.Department!.Id;
         viewModel.DeptName = employee.Department.Name;
         Console.WriteLine($"コントローラーのConfirm2：社員Id={viewModel.Id},社員名={viewModel.Name},部署Id={viewModel.DeptId},部署名={viewModel.DeptName}");
         // 確認画面を表示する

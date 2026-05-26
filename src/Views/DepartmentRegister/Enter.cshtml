@@ -6,7 +6,12 @@
     ViewData["Title"] = "部署登録(入力)";
 }
 <h2 class="text-center mt-4">@ViewData["Title"]</h2>
-
+@if (TempData[key: "msg"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["msg"]
+    </div>
+}
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-4 col-sm-6">
