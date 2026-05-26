@@ -87,6 +87,23 @@ public class EmployeeRegisterController : Controller
         _logger.LogInformation($"部署Id:{viewModel.DeptId ?? 0}の部署を取得する");
         // ViewModelに部署名を設定する
         viewModel.DeptName = department.Name;
+
+        bool emailjudge = _employeeRegisterService.EmailAffiliationCheck(viewModel.Email);
+        bool phonejudge = _employeeRegisterService.PhoneAffiliationCheck(viewModel.Phone);
+
+        if (emailjudge == false)
+        {
+            TempData["msg_email"] = "同じメールアドレスがすでに登録されています。";
+        }
+        if (phonejudge == false)
+        {
+            TempData["msg_phone"] = "同じ電話番号がすでに登録されています。";
+        }
+        if (emailjudge == false | phonejudge == false)
+        {
+            PopulateDepartments(viewModel);
+            return View("Enter", viewModel);
+        }
         // 確認画面を表示する
         return View(viewModel);
     }

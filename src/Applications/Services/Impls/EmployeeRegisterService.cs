@@ -84,4 +84,34 @@ public class EmployeeRegisterService : IEmployeeRegisterService
             throw;
         }
     }
+
+    public bool EmailAffiliationCheck(string? email)
+    {
+        var sameemail = _context.Employees
+            .Where(e => e.Email == email)
+            .ToList();
+        if (sameemail.Count == 0)
+        {
+            return true; //従業員追加OK
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool PhoneAffiliationCheck(string? phone)
+    {
+        var samephone = _context.Employees
+            .Where(e => e.Phone == phone)
+            .ToList();
+        if (samephone.Count == 0)
+        {
+            return true; //従業員追加OK
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

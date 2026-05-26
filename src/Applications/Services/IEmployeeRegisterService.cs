@@ -23,4 +23,7 @@ public interface IEmployeeRegisterService
     /// </summary>
     /// <param name="employee"></param>
     void Register(Employee employee);
+    bool EmailAffiliationCheck(string? email);
+    bool PhoneAffiliationCheck(string? phone);
+
 }
