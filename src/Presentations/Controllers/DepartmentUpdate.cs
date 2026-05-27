@@ -51,7 +51,6 @@ public class DepartmentUpdateController : Controller
     [HttpPost("Enter")]
     public IActionResult Enter(DepartmentUpdateViewModel viewModel)
     {
-        Console.WriteLine($"Enterの部署Idチェック{viewModel.Id}");
         // 部署一覧を取得してViewModelに設定する(SelectListItem形式)
         // viewModelをviewに渡して画面表示する
         return View(viewModel);
@@ -76,11 +75,6 @@ public class DepartmentUpdateController : Controller
         // 選択された部署のIdで部署データを取得する
         //var Department = _DepartmentUpdateService.GetById(viewModel.Id ?? 0);
         _logger.LogInformation($"部署Id:{viewModel.Id ?? 0}の部署を取得する");
-        // ViewModelに部署名を設定する
-        //viewModel.Id = Department.Id;
-        //viewModel.Name = Department.Name;
-        //viewModel.DeptId = Department.Department!.Id;
-        //viewModel.DeptName = Department.Department.Name;
 
         bool deptnamejudge = _DepartmentUpdateService.DeptNameAffiliationCheck(viewModel.Name, viewModel.Id);
 
