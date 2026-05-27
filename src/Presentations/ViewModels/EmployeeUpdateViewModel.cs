@@ -7,6 +7,8 @@ namespace csharp_training_202605.Presentations.ViewModels;
 /// </summary>
 public class EmployeeUpdateViewModel
 {
+
+    public int? Id { get; set; } = 0;
     /// <summary>
     /// 氏名
     /// </summary>

@@ -100,4 +100,21 @@ public class DepartmentRepository : IDepartmentRepository
                 "部門の削除ができませんでした。", e);
         }
     }
+
+    public void Renewal(Department department)
+    {
+        try
+        {
+            var entity = _context.Departments
+                .FirstOrDefault(d => d.DeptId == department.Id!.Value);
+
+            entity!.DeptName = department.Name!;
+            _context.SaveChanges();
+        }
+        catch (Exception e)
+        {
+            throw new InternalException(
+                "部門の変更ができませんでした。", e);
+        }
+    }
 }

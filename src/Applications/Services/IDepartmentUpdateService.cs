@@ -3,7 +3,7 @@ namespace csharp_training_202605.Applications.Services;
 /// <summary>
 /// 従業員登録サービスインターフェイス
 /// </summary>
-public interface IEmployeeUpdateService
+public interface IDepartmentUpdateService
 {
     /// <summary>
     /// すべての部署を取得する
@@ -22,8 +22,7 @@ public interface IEmployeeUpdateService
     /// 新しい従業員を登録する
     /// </summary>
     /// <param name="employee"></param>
-    void Update(Employee employee);
-    bool EmailAffiliationCheck(string? email, int? id);
-    bool PhoneAffiliationCheck(string? phone, int? id);
+    void Update(Department department);
+    bool DeptNameAffiliationCheck(string? deptname, int? id);
 
 }

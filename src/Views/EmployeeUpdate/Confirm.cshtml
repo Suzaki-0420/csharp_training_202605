@@ -35,6 +35,7 @@
             <form>
                 @*POSTリクエスト(Update/Back)に値を渡すためにhidden属性を使う*@
                 @*これがないと、次の画面で値が消えてしまう*@
+                <input type="hidden" asp-for="Id" />
                 <input type="hidden" asp-for="Name" />
                 <input type="hidden" asp-for="Email" />
                 <input type="hidden" asp-for="Phone" />
@@ -44,8 +45,8 @@
                 @*同じフォーム内で[登録]と[戻る]を分岐できる*@
                 <div class="text-center mt-4">
                     <button type="submit" formaction="@Url.Action("Update", "EmployeeUpdate")" formmethod="post"
-                            class="btn btn-primary">登録</button>
-                    <button type="submit" formaction="@Url.Action("Back", "EmployeeUpdate")" formmethod="post"
+                            class="btn btn-primary">更新</button>
+                    <button type="submit" formaction="@Url.Action("Enter", "EmployeeUpdate")" formmethod="post"
                             class="btn btn-secondary">戻る</button>
                 </div>
             </form>

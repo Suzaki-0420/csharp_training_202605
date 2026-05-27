@@ -53,8 +53,13 @@ public class EmployeeRepository : IEmployeeRepository
     {
         try
         {
-            var entity = _adapter.Convert(employee);
-            _context.Employees.Update(entity);
+            var entity = _context.Employees
+                .FirstOrDefault(e => e.EmpId == employee.Id!.Value);
+
+            entity.EmpName = employee.Name;
+            entity.Email = employee.Email;
+            entity.Phone = employee.Phone;
+            entity.DeptId = employee.Department?.Id;
             _context.SaveChanges();
         }
         catch (Exception e)

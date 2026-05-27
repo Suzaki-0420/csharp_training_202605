@@ -14,6 +14,7 @@
                 <th>部門ID</th>
                 <th>部門名</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +30,15 @@
                             <input type="hidden" name="Name" value="@department.Name" />
 
                             <button type="submit" class="btn btn-secondary">削除</button>
+                        </form>
+                    </td>
+                    <td>
+                        <!-- 行ごとにフォームを作成し、POSTでオブジェクトを送信 -->
+                        <form asp-controller="DepartmentUpdate" asp-action="Enter" method="post" class="d-inline">
+                            <input type="hidden" name="Id" value="@department.Id" />
+                            <input type="hidden" name="Name" value="@department.Name" />
+
+                            <button type="submit" class="btn btn-danger">更新</button>
                         </form>
                     </td>
                 </tr>

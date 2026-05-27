@@ -81,6 +81,8 @@ public static class DependencyExtension
         services.AddScoped<IDepartmentDeleteService, DepartmentDeleteService>();
         // 従業員更新サービスインターフェイスの実装
         services.AddScoped<IEmployeeUpdateService, EmployeeUpdateService>();
+        // 部門更新サービスインターフェイスの実装
+        services.AddScoped<IDepartmentUpdateService, DepartmentUpdateService>();
     }
 
 
@@ -151,6 +153,15 @@ public static class DependencyExtension
         services.AddScoped(
             provider =>
             new TempDataStore<EmployeeUpdateViewModel>("EmployeeUpdateViewModel")
+        );
+
+        // 部門削除ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        services.AddScoped<DepartmentUpdateViewModelAdapter>();
+        // TempDataへのDepartmentDeleteViewの保存・復元するためのクラス
+        // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
+        services.AddScoped(
+            provider =>
+            new TempDataStore<DepartmentUpdateViewModel>("DepartmentUpdateViewModel")
         );
     }
 }

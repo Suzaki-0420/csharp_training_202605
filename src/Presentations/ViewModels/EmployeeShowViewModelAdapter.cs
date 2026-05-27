@@ -17,7 +17,7 @@ public class EmployeeShowViewModelAdapter : IConverter<Employee, EmployeeShowVie
 
     public EmployeeShowViewModel Convert(Employee target)
     {
-        var employeeshowviewmodel = new EmployeeShowViewModel(target.Id, target.Name, target.Email, target.Phone, target.Department?.Name);
+        var employeeshowviewmodel = new EmployeeShowViewModel(target.Id, target.Name, target.Email, target.Phone, target.Department?.Id, target.Department?.Name);
         return employeeshowviewmodel;
     }
 }

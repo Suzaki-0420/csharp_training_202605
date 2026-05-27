@@ -22,4 +22,6 @@ public interface IDepartmentRepository
 
 
     void Delete(Department department);
+
+    void Renewal(Department department);
 }

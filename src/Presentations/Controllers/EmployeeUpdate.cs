@@ -48,18 +48,10 @@ public class EmployeeUpdateController : Controller
     /// 従業登録(入力)画面表示 アクションメソッド
     /// </summary>
     /// <returns></returns>
-    [HttpGet("Enter")]
-    public IActionResult Enter()
+    [HttpPost("Enter")]
+    public IActionResult Enter(EmployeeUpdateViewModel viewModel)
     {
-        EmployeeUpdateViewModel? viewModel = null;
-        // [戻る]ボタンへの対応
-        // TempDataからEmployeeUpdateViewModelを取得する
-        viewModel = _empDataStore.Load(this);
-        if (viewModel == null)
-        {
-            // 従業員登録ViewModelを生成する
-            viewModel = new EmployeeUpdateViewModel();
-        }
+        Console.WriteLine($"Enterの部署Idチェック{viewModel.DeptId}");
         // 部署一覧を取得してViewModelに設定する(SelectListItem形式)
         PopulateDepartments(viewModel);
         // viewModelをviewに渡して画面表示する
@@ -74,6 +66,7 @@ public class EmployeeUpdateController : Controller
     [HttpPost("Confirm")]
     public IActionResult Confirm(EmployeeUpdateViewModel viewModel)
     {
+        Console.WriteLine($"該当従業員最初チェックId：{viewModel.Id}");
         // バリデーションチェック
         if (!ModelState.IsValid) // バリデーションエラーあり
         {
@@ -83,27 +76,37 @@ public class EmployeeUpdateController : Controller
             return View("Enter", viewModel);
         }
         // 選択された部署のIdで部署データを取得する
-        var department = _employeeUpdateService.GetById(viewModel.DeptId ?? 0);
+        //var employee = _employeeUpdateService.GetById(viewModel.Id ?? 0);
         _logger.LogInformation($"部署Id:{viewModel.DeptId ?? 0}の部署を取得する");
         // ViewModelに部署名を設定する
-        viewModel.DeptName = department.Name;
+        //viewModel.Id = employee.Id;
+        //viewModel.Name = employee.Name;
+        //viewModel.DeptId = employee.Department!.Id;
+        //viewModel.DeptName = employee.Department.Name;
+        Console.WriteLine($"該当従業員Id：{viewModel.Id}");
+        Console.WriteLine($"該当従業員Email：{viewModel.Email}");
 
-        bool emailjudge = _employeeUpdateService.EmailAffiliationCheck(viewModel.Email);
-        bool phonejudge = _employeeUpdateService.PhoneAffiliationCheck(viewModel.Phone);
+        bool emailjudge = _employeeUpdateService.EmailAffiliationCheck(viewModel.Email, viewModel.Id);
+        bool phonejudge = _employeeUpdateService.PhoneAffiliationCheck(viewModel.Phone, viewModel.Id);
+        PopulateDepartments(viewModel);
 
-        if (emailjudge == false)
+        if (emailjudge == true)
         {
             TempData["msg_email"] = "同じメールアドレスがすでに登録されています。";
         }
-        if (phonejudge == false)
+        if (phonejudge == true)
         {
             TempData["msg_phone"] = "同じ電話番号がすでに登録されています。";
         }
-        if (emailjudge == false | phonejudge == false)
+        if (emailjudge == true | phonejudge == true)
         {
             PopulateDepartments(viewModel);
             return View("Enter", viewModel);
         }
+        var department = _employeeUpdateService.GetById(viewModel.DeptId ?? 0);
+        viewModel.DeptName = department.Name;
+        Console.WriteLine($"該当従業員DeptId：{viewModel.DeptId}");
+        Console.WriteLine($"該当従業員DeptName：{viewModel.DeptName}");
         // 確認画面を表示する
         return View(viewModel);
     }
@@ -113,7 +116,7 @@ public class EmployeeUpdateController : Controller
     /// </summary>
     /// <param name="form"></param>
     /// <returns></returns>
-    [HttpPost("Regiter")]
+    [HttpPost("Update")]
     public IActionResult Update(EmployeeUpdateViewModel viewModel)
     {
         // EmployeeUpdateViewModelをシリアライズして、TempDataに保存する

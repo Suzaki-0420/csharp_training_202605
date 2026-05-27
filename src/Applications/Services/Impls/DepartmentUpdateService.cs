@@ -6,7 +6,7 @@ namespace csharp_training_202605.Applications.Services.Impls;
 /// <summary>
 /// 従業員登録サービスインターフェイスの実装
 /// </summary>
-public class EmployeeUpdateService : IEmployeeUpdateService
+public class DepartmentUpdateService : IDepartmentUpdateService
 {
 
     /// <summary>
@@ -28,7 +28,7 @@ public class EmployeeUpdateService : IEmployeeUpdateService
     /// <param name="context">アプリケーション用DbContext</param>
     /// <param name="employeeRepository">従業員のCRUD操作インターフェイス</param>
     /// <param name="departmentRepository">部署のCRUD操作インターフェイス</param>
-    public EmployeeUpdateService(
+    public DepartmentUpdateService(
         AppDbContext context,
         IEmployeeRepository employeeRepository,
         IDepartmentRepository departmentRepository)
@@ -66,14 +66,14 @@ public class EmployeeUpdateService : IEmployeeUpdateService
     /// 新しい従業員を登録する
     /// </summary>
     /// <param name="employee"></param>
-    public void Update(Employee employee)
+    public void Update(Department department)
     {
         try
         {
             // トランザクションの開始
             _context.Database.BeginTransaction();
             // 従業員の登録
-            _employeeRepository.Renewal(employee);
+            _departmentRepository.Renewal(department);
             // トランザクションのコミット
             _context.Database.CommitTransaction();
         }
@@ -85,15 +85,9 @@ public class EmployeeUpdateService : IEmployeeUpdateService
         }
     }
 
-    public bool EmailAffiliationCheck(string? email, int? id)
+    public bool DeptNameAffiliationCheck(string? deptname, int? id)
     {
-        return _context.Employees
-            .Any(e => e.Email == email && e.EmpId != id);
-    }
-
-    public bool PhoneAffiliationCheck(string? phone, int? id)
-    {
-        return _context.Employees
-            .Any(e => e.Phone == phone && e.EmpId != id);
+        return _context.Departments
+            .Any(d => d.DeptName == deptname && d.DeptId != id);
     }
 }

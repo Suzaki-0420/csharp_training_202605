@@ -23,16 +23,18 @@ public class EmployeeShowViewModel
     [Display(Name = "電話番号")]
     public string? Phone { get; set; } = string.Empty;
 
+    public int? DeptId { get; set; } = 0;
     [Display(Name = "部署")]
     public string? DeptName { get; set; } = string.Empty;
 
 
-    public EmployeeShowViewModel(int? id, string? name, string? email, string? phone, string? deptname)
+    public EmployeeShowViewModel(int? id, string? name, string? email, string? phone, int? deptid, string? deptname)
     {
         Id = id;
         Name = name;
         Email = email;
         Phone = phone;
+        DeptId = deptid;
         DeptName = deptname;
     }
 }

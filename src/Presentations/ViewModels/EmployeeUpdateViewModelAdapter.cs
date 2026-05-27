@@ -19,7 +19,7 @@ public class EmployeeUpdateViewModelAdapter : IRestorer<Employee, EmployeeUpdate
         // Department(部署)を作成する
         var department = new Department(target.DeptId!.Value, target.DeptName);
         // 登録するEmployee(従業員)を作成する
-        var employee = new Employee(target.Name!, target.Email!, target.Phone!, department);
+        var employee = new Employee(target.Id!, target.Name!, target.Email!, target.Phone!, department);
         return employee;
     }
 }

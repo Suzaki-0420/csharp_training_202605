@@ -23,6 +23,7 @@
         <div class="col-md-4 col-sm-6">
             @* 送信先はControllerのConfirm()、POSTは入力値を送信する*@
             <form asp-action="Confirm" asp-controller="EmployeeUpdate" method="post">
+                <input type="hidden" asp-for="Id" />
                 <div class="mb-3">
                     @* Tag Helperがname属性やid属性を自動生成 Model Bindingに必要なHTMLが作成される*@
                     <label asp-for="Name" class="form-label"></label>
@@ -51,6 +52,8 @@
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">完了</button>
+                    <button type="submit" formaction="@Url.Action("Show", "EmployeeShow")" formmethod="get"
+                            class="btn btn-secondary">戻る</button>
                 </div>
             </form>
         </div>
