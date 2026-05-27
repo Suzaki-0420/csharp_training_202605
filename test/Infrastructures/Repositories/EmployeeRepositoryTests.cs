@@ -95,6 +95,34 @@ public class EmployeeRightExistTest
         Assert.AreEqual(1, employees.Count);
         AssertEmployee(employees[0], 2, "鈴木三郎", "suzukisaburou@csharp.com", "090-0000-0002");
     }
+
+    [TestMethod]
+    public void Employee_Renewal_Success()
+    {
+        var departmententity = new Department(1, "総務部");
+        var deleteentity = new Employee(2, "鈴木次郎", "suzukisaburou@csharp.com", "090-0000-0002", departmententity); //追加するエンティティ
+        _employeerepository.Renewal(deleteentity);
+
+        var employees = _employeerepository.FindAll();//DBから削除後の従業員リストを取得
+
+        Assert.AreEqual(2, employees.Count);
+        AssertEmployee(employees[0], 1, "田中太郎", "tanakatarou@csharp.com", "090-0000-0001");
+        AssertEmployee(employees[1], 2, "鈴木次郎", "suzukisaburou@csharp.com", "090-0000-0002");
+    }
+
+    [TestMethod]
+    public void Employee_Renewal_Success_Department_null()
+    {
+        //var departmententity = new Department(1, "総務部");
+        var deleteentity = new Employee(2, "鈴木次郎", "suzukisaburou@csharp.com", "090-0000-0002", null); //更新するエンティティ
+        _employeerepository.Renewal(deleteentity);
+
+        var employees = _employeerepository.FindAll();//DBから削除後の従業員リストを取得
+
+        Assert.AreEqual(2, employees.Count);
+        AssertEmployee(employees[0], 1, "田中太郎", "tanakatarou@csharp.com", "090-0000-0001");
+        AssertEmployee(employees[1], 2, "鈴木次郎", "suzukisaburou@csharp.com", "090-0000-0002");
+    }
 }
 
 [DoNotParallelize]
@@ -158,6 +186,16 @@ public class EmployeeExceptionsTest
         var departmententity = new Department(2, "経理部");
         var deleteentity = new Employee(1, "田中太郎", "tanakatarou@csharp.com", "090-0000-0001", departmententity); //追加するエンティティ
         var exception = Assert.ThrowsException<InternalException>(() => _employeerepository.Delete(deleteentity));
+
+        Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
+    }
+
+    [TestMethod]
+    public void Employee_Renewal_Exception()
+    {
+        var departmententity = new Department(1, "総務部");
+        var deleteentity = new Employee(2, "鈴木次郎", "suzukisaburou@csharp.com", "090-0000-0002", departmententity); //追加するエンティティ
+        var exception = Assert.ThrowsException<InternalException>(() => _employeerepository.Renewal(deleteentity));
 
         Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
     }

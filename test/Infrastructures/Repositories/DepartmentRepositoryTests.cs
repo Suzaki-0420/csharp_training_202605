@@ -84,7 +84,7 @@ public class DepartmentRightExistTest
     [TestMethod]
     public void Department_Delete_Deleted()
     {
-        var deleteentity = new Department(3, "開発部"); //追加するエンティティ
+        var deleteentity = new Department(3, "開発部"); //削除するエンティティ
         _departmentrepository.Delete(deleteentity);
 
         var departments = _departmentrepository.FindAll();//DBから追加後の従業員リストを取得
@@ -92,6 +92,20 @@ public class DepartmentRightExistTest
         Assert.AreEqual(2, departments.Count);
         AssertDepartment(departments[0], 1, "総務部");
         AssertDepartment(departments[1], 2, "経理部");
+    }
+
+    [TestMethod]
+    public void Department_Renewal_Success()
+    {
+        var deleteentity = new Department(3, "営業部"); //更新するエンティティ
+        _departmentrepository.Renewal(deleteentity);
+
+        var departments = _departmentrepository.FindAll();//DBから追加後の従業員リストを取得
+
+        Assert.AreEqual(3, departments.Count);
+        AssertDepartment(departments[0], 1, "総務部");
+        AssertDepartment(departments[1], 2, "経理部");
+        AssertDepartment(departments[2], 3, "営業部");
     }
 }
 
@@ -153,6 +167,15 @@ public class DepartmentExceptionsTest
     {
         var deleteentity = new Department(1, "総務部");
         var exception = Assert.ThrowsException<InternalException>(() => _departmentrepository.Delete(deleteentity));
+
+        Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
+    }
+
+    [TestMethod]
+    public void Department_Renewal_Exception()
+    {
+        var deleteentity = new Department(3, "営業部");
+        var exception = Assert.ThrowsException<InternalException>(() => _departmentrepository.Renewal(deleteentity));
 
         Assert.IsInstanceOfType<InvalidOperationException>(exception.InnerException);
     }
