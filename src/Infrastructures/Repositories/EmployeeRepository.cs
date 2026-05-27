@@ -113,7 +113,7 @@ public class EmployeeRepository : IEmployeeRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "指定された社員を取得できませんでした。", e);
+                "指定された従業員を取得できませんでした。", e);
         }
     }
 

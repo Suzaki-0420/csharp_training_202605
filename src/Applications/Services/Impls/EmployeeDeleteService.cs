@@ -48,7 +48,7 @@ public class EmployeeDeleteService : IEmployeeDeleteService
         var result = _employeeRepository.FindById(id)!;
         if (result == null)
         {
-            throw new NotFoundException($"社員Id{id}に該当する社員は存在しません");
+            throw new NotFoundException($"従業員Id{id}に該当する従業員は存在しません");
         }
         return result;
     }

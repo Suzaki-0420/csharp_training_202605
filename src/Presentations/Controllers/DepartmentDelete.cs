@@ -79,12 +79,12 @@ public class DepartmentDeleteController : Controller
         // バリデーションチェック
         if (!ModelState.IsValid) // バリデーションエラーあり
         {
-            // 社員一覧を取得してViewModelに設定する(SelectListItem形式)
+            // 従業員一覧を取得してViewModelに設定する(SelectListItem形式)
             PopulateDepartments(viewModel);
             // 入力画面の表示
             return View("Enter", viewModel);
         }
-        // 選択された社員のIdで社員データを取得する
+        // 選択された従業員のIdで従業員データを取得する
         var department = _departmentDeleteService.GetById(viewModel.Id ?? 0);
         _logger.LogInformation($"部門Id:{viewModel.Id ?? 0}の部門を取得する");
         // ViewModelに部署名を設定する
@@ -110,7 +110,7 @@ public class DepartmentDeleteController : Controller
         bool judge = _departmentDeleteService.AffiliationCheck(viewModel.Id);
         if (judge == false)
         {
-            TempData["msg"] = "所属社員がいるため削除できません。";
+            TempData["msg"] = "所属従業員がいるため削除できません。";
             return View("Confirm", viewModel);
         }
         // 登録処理GETアクションメソッドにリダイレクトする
@@ -161,8 +161,8 @@ public class DepartmentDeleteController : Controller
     {
         // 従業員登録サービスから部署一覧を取得する
         var departments = _departmentDeleteService.GetDepartments();
-        // 社員情報をDepartmentDeleteViewModelに登録する
+        // 従業員情報をDepartmentDeleteViewModelに登録する
         viewModel.SetDepartments(departments);
-        _logger.LogInformation("社員リストを設定");
+        _logger.LogInformation("従業員リストを設定");
     }
 }

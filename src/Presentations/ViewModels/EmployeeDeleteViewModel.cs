@@ -8,12 +8,12 @@ namespace csharp_training_202605.Presentations.ViewModels;
 public class EmployeeDeleteViewModel
 {
 
-    [Display(Name = "社員番号")]
+    [Display(Name = "従業員番号")]
     public int? Id { get; set; } = 0;
     /// <summary>
     /// 氏名
     /// </summary>
-    [Display(Name = "削除する社員名")]
+    [Display(Name = "削除する従業員名")]
     public string? Name { get; set; } = string.Empty;
 
     [Display(Name = "メールアドレス")]
@@ -36,7 +36,7 @@ public class EmployeeDeleteViewModel
     public string? DeptName { get; set; } = string.Empty;
 
     /// <summary>
-    /// 社員のリストをSelectListItemのリストに変換してプロパティに設定する
+    /// 従業員のリストをSelectListItemのリストに変換してプロパティに設定する
     /// </summary>
     /// <param name="departments"></param>
     public void SetEmployees(List<Employee> employees)
@@ -60,6 +60,6 @@ public class EmployeeDeleteViewModel
 
     public override string ToString()
     {
-        return $"社員番号={Id} , 名前={Name} , 部署ID={DeptId} , 部署名={DeptName} ";
+        return $"従業員番号={Id} , 名前={Name} , 部署ID={DeptId} , 部署名={DeptName} ";
     }
 }

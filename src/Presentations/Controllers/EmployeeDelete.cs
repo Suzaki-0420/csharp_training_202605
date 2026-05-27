@@ -79,24 +79,24 @@ public class EmployeeDeleteController : Controller
         // バリデーションチェック
         if (!ModelState.IsValid) // バリデーションエラーあり
         {
-            // 社員一覧を取得してViewModelに設定する(SelectListItem形式)
+            // 従業員一覧を取得してViewModelに設定する(SelectListItem形式)
             PopulateEmployees(viewModel);
             // 入力画面の表示
             return View("Enter", viewModel);
         }
-        // 選択された社員のIdで社員データを取得する
+        // 選択された従業員のIdで従業員データを取得する
         Console.WriteLine("データ取得");
         Console.WriteLine(viewModel.Id);
         var employee = _employeeDeleteService.GetById(viewModel.Id ?? 0);
         Console.WriteLine($"コントローラーのConfirm：{employee}");
-        _logger.LogInformation($"社員Id:{viewModel.Id ?? 0}の社員を取得する");
+        _logger.LogInformation($"従業員Id:{viewModel.Id ?? 0}の従業員を取得する");
         // ViewModelに部署名を設定する
         Console.WriteLine(employee);
         viewModel.Id = employee.Id;
         viewModel.Name = employee.Name;
         viewModel.DeptId = employee.Department!.Id;
         viewModel.DeptName = employee.Department.Name;
-        Console.WriteLine($"コントローラーのConfirm2：社員Id={viewModel.Id},社員名={viewModel.Name},部署Id={viewModel.DeptId},部署名={viewModel.DeptName}");
+        Console.WriteLine($"コントローラーのConfirm2：従業員Id={viewModel.Id},従業員名={viewModel.Name},部署Id={viewModel.DeptId},部署名={viewModel.DeptName}");
         // 確認画面を表示する
         return View(viewModel);
     }
@@ -109,7 +109,7 @@ public class EmployeeDeleteController : Controller
     [HttpPost("Delete")]
     public IActionResult Delete(EmployeeDeleteViewModel viewModel)
     {
-        Console.WriteLine($"コントローラーのDelete：社員Id={viewModel.Id},社員名={viewModel.Name},部署Id={viewModel.DeptId},部署名={viewModel.DeptName}");
+        Console.WriteLine($"コントローラーのDelete：従業員Id={viewModel.Id},従業員名={viewModel.Name},部署Id={viewModel.DeptId},部署名={viewModel.DeptName}");
         // EmployeeDeleteViewModelをシリアライズして、TempDataに保存する
         _empDataStore.Save(this, viewModel);
         // 登録処理GETアクションメソッドにリダイレクトする
@@ -127,7 +127,7 @@ public class EmployeeDeleteController : Controller
         EmployeeDeleteViewModel? viewModel = null;
         // TempDataからEmployeeDeleteViewModelを取得する
         viewModel = _empDataStore.Load(this);
-        Console.WriteLine($"コントローラーのComplete：社員Id={viewModel.Id},社員名={viewModel.Name},部署Id={viewModel.DeptId},部署名={viewModel.DeptName}");
+        Console.WriteLine($"コントローラーのComplete：従業員Id={viewModel.Id},従業員名={viewModel.Name},部署Id={viewModel.DeptId},部署名={viewModel.DeptName}");
         if (viewModel == null)
         {
             // データが存在しない場合、入力画面にリダイレクト
@@ -162,8 +162,8 @@ public class EmployeeDeleteController : Controller
     {
         // 従業員登録サービスから部署一覧を取得する
         var employees = _employeeDeleteService.GetEmployees();
-        // 社員情報をEmployeeDeleteViewModelに登録する
+        // 従業員情報をEmployeeDeleteViewModelに登録する
         viewModel.SetEmployees(employees);
-        _logger.LogInformation("社員リストを設定");
+        _logger.LogInformation("従業員リストを設定");
     }
 }

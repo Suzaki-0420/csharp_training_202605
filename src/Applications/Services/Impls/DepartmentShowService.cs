@@ -39,7 +39,7 @@ public class DepartmentShowService : IDepartmentShowService
     }
 
     /// <summary>
-    /// すべての社員を取得する
+    /// すべての従業員を取得する
     /// </summary>
     /// <returns></returns>
     public List<Department> GetDepartments()

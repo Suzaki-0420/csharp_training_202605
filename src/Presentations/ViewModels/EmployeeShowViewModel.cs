@@ -8,11 +8,11 @@ namespace csharp_training_202605.Presentations.ViewModels;
 public class EmployeeShowViewModel
 {
 
-    [Display(Name = "社員ID")]
+    [Display(Name = "従業員ID")]
     public int? Id { get; set; } = 0;
 
     /// <summary>
-    /// 社員名
+    /// 従業員名
     /// </summary>
     [Display(Name = "氏名")]
     public string? Name { get; set; } = string.Empty;

@@ -6,7 +6,7 @@ namespace csharp_training_202605.Applications.Domains;
 /// </summary>
 public class Employee
 {
-    public int? Id { get; private set; } // 社員Id
+    public int? Id { get; private set; } // 従業員Id
     public string Name { get; private set; } = string.Empty; // 氏名
     public string Email { get; private set; } = string.Empty; // メールアドレス
     public string Phone { get; private set; } = string.Empty; // 電話番号
@@ -17,7 +17,7 @@ public class Employee
     /// <summary>
     /// コンストラクタ
     /// </summary>
-    /// <param name="id">社員Id</param>
+    /// <param name="id">従業員Id</param>
     /// <param name="name">氏名</param>
     /// <param name="department">所属部署</param>
     public Employee(int? id, string name, string email, string phone, Department? department)
@@ -31,7 +31,7 @@ public class Employee
     }
 
     /// <summary>
-    /// ID未定の社員を作成する場合のコンストラクタ
+    /// ID未定の従業員を作成する場合のコンストラクタ
     /// </summary>
     /// <param name="name">氏名</param>
     /// <param name="department">所属部署</param>

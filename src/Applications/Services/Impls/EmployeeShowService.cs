@@ -39,7 +39,7 @@ public class EmployeeShowService : IEmployeeShowService
     }
 
     /// <summary>
-    /// すべての社員を取得する
+    /// すべての従業員を取得する
     /// </summary>
     /// <returns></returns>
     public List<Employee> GetEmployees()
@@ -47,7 +47,7 @@ public class EmployeeShowService : IEmployeeShowService
         var result = _employeeRepository.FindAll()!;
         if (result == null)
         {
-            throw new NotFoundException($"社員は存在しません");
+            throw new NotFoundException($"従業員は存在しません");
         }
         return result;
     }

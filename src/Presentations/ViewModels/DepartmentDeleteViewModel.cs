@@ -18,7 +18,7 @@ public class DepartmentDeleteViewModel
 
 
     /// <summary>
-    /// 社員のリストをSelectListItemのリストに変換してプロパティに設定する
+    /// 従業員のリストをSelectListItemのリストに変換してプロパティに設定する
     /// </summary>
     /// <param name="departments"></param>
     public void SetDepartments(List<Department> departments)
