@@ -131,7 +131,7 @@ public class DepartmentDeleteController : Controller
         if (viewModel == null)
         {
             // データが存在しない場合、入力画面にリダイレクト
-            return RedirectToAction("Enter");
+            return RedirectToAction("Show", "DepartmentShow");
         }
         var department = _adapter.Restore(viewModel!);
         Console.WriteLine($"Completeでのdepartment：{department}");

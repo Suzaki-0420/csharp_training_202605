@@ -81,6 +81,7 @@ public class DepartmentUpdateController : Controller
         if (deptnamejudge == true)
         {
             TempData["msg"] = "同じ名前の部署がすでに存在しています。";
+            return View("Enter", viewModel);
         }
 
         // 確認画面を表示する
@@ -115,7 +116,7 @@ public class DepartmentUpdateController : Controller
         if (viewModel == null)
         {
             // データが存在しない場合、入力画面にリダイレクト
-            return RedirectToAction("Enter");
+            return RedirectToAction("Show", "DepartmentShow");
         }
         // DepartmentUpdateFormをドメインモデル:Departmentに変換する
         var Department = _adapter.Restore(viewModel!);
