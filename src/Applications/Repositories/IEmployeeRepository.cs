@@ -1,14 +1,14 @@
 using csharp_training_202605.Applications.Domains;
 namespace csharp_training_202605.Applications.Repositories;
 /// <summary>
-/// ドメインオブジェクト:従業員のCRUD操作インターフェイス
+/// ドメインオブジェクト:社員のCRUD操作インターフェイス
 /// </summary>
 public interface IEmployeeRepository
 {
     /// <summary>
-    /// 従業員を永続化する
+    /// 社員を永続化する
     /// </summary>
-    /// <param name="employee">永続化対象の従業員</param>
+    /// <param name="employee">永続化対象の社員</param>
     void Create(Employee employee);
 
     List<Employee> FindAll();

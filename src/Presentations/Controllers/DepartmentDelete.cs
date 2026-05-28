@@ -3,7 +3,7 @@ using csharp_training_202605.Applications.Services;
 using csharp_training_202605.Presentations.ViewModels;
 namespace csharp_training_202605.Presentations.Controllers;
 /// <summary>
-/// 従業員登録コントローラ
+/// 社員登録コントローラ
 /// </summary>
 [Route("DepartmentDelete")]
 public class DepartmentDeleteController : Controller
@@ -13,11 +13,11 @@ public class DepartmentDeleteController : Controller
     /// </summary>
     private readonly ILogger<DepartmentDeleteController> _logger;
     /// <summary>
-    /// 従業員登録サービスインターフェイス
+    /// 社員登録サービスインターフェイス
     /// </summary>
     private readonly IDepartmentDeleteService _departmentDeleteService;
     /// <summary>
-    /// 従業員登録ViewModelをDepartmentに変換するアダプター
+    /// 社員登録ViewModelをDepartmentに変換するアダプター
     /// </summary>
     private readonly DepartmentDeleteViewModelAdapter _adapter;
     /// <summary>
@@ -29,8 +29,8 @@ public class DepartmentDeleteController : Controller
     /// コンストラクタ
     /// </summary>
     /// <param name="logger">ロガー</param>
-    /// <param name="departmentDeleteService">従業員登録サービスインターフェイス</param>
-    /// <param name="departmentDeleteViewModelAdapter">従業員登録ViewModelをDepartmentに変換するアダプター</param>
+    /// <param name="departmentDeleteService">社員登録サービスインターフェイス</param>
+    /// <param name="departmentDeleteViewModelAdapter">社員登録ViewModelをDepartmentに変換するアダプター</param>
     /// <param name="empDataStore">TempDataを通じて一時的にViewModelを保存・復元するためのクラス</param>
     public DepartmentDeleteController(
         ILogger<DepartmentDeleteController> logger,
@@ -57,7 +57,7 @@ public class DepartmentDeleteController : Controller
         viewModel = _empDataStore.Load(this);
         if (viewModel == null)
         {
-            // 従業員登録ViewModelを生成する
+            // 社員登録ViewModelを生成する
             viewModel = new DepartmentDeleteViewModel();
         }
         // 部署一覧を取得してViewModelに設定する(SelectListItem形式)
@@ -79,14 +79,14 @@ public class DepartmentDeleteController : Controller
         // バリデーションチェック
         if (!ModelState.IsValid) // バリデーションエラーあり
         {
-            // 従業員一覧を取得してViewModelに設定する(SelectListItem形式)
+            // 社員一覧を取得してViewModelに設定する(SelectListItem形式)
             PopulateDepartments(viewModel);
             // 入力画面の表示
             return View("Enter", viewModel);
         }
-        // 選択された従業員のIdで従業員データを取得する
+        // 選択された社員のIdで社員データを取得する
         var department = _departmentDeleteService.GetById(viewModel.Id ?? 0);
-        _logger.LogInformation($"部門Id:{viewModel.Id ?? 0}の部門を取得する");
+        _logger.LogInformation($"部署Id:{viewModel.Id ?? 0}の部署を取得する");
         // ViewModelに部署名を設定する
         viewModel.Id = department.Id;
         viewModel.Name = department.Name;
@@ -110,7 +110,7 @@ public class DepartmentDeleteController : Controller
         bool judge = _departmentDeleteService.AffiliationCheck(viewModel.Id);
         if (judge == false)
         {
-            TempData["msg"] = "所属従業員がいるため削除できません。";
+            TempData["msg"] = "所属社員がいるため削除できません。";
             return View("Confirm", viewModel);
         }
         // 登録処理GETアクションメソッドにリダイレクトする
@@ -135,7 +135,7 @@ public class DepartmentDeleteController : Controller
         }
         var department = _adapter.Restore(viewModel!);
         Console.WriteLine($"Completeでのdepartment：{department}");
-        // 従業員を削除する
+        // 社員を削除する
         _departmentDeleteService.Delete(department);
         return View(viewModel);
     }
@@ -159,10 +159,10 @@ public class DepartmentDeleteController : Controller
     /// </summary>
     private void PopulateDepartments(DepartmentDeleteViewModel viewModel)
     {
-        // 従業員登録サービスから部署一覧を取得する
+        // 社員登録サービスから部署一覧を取得する
         var departments = _departmentDeleteService.GetDepartments();
-        // 従業員情報をDepartmentDeleteViewModelに登録する
+        // 社員情報をDepartmentDeleteViewModelに登録する
         viewModel.SetDepartments(departments);
-        _logger.LogInformation("従業員リストを設定");
+        _logger.LogInformation("社員リストを設定");
     }
 }

@@ -4,7 +4,7 @@ using csharp_training_202605.Exceptions;
 using csharp_training_202605.Infrastructures.Context;
 namespace csharp_training_202605.Applications.Services.Impls;
 /// <summary>
-/// 従業員登録サービスインターフェイスの実装
+/// 社員登録サービスインターフェイスの実装
 /// </summary>
 public class DepartmentShowService : IDepartmentShowService
 {
@@ -14,7 +14,7 @@ public class DepartmentShowService : IDepartmentShowService
     /// </summary>
     private readonly AppDbContext _context;
     /// <summary>
-    /// ドメインオブジェクト:従業員のCRUD操作インターフェイス
+    /// ドメインオブジェクト:社員のCRUD操作インターフェイス
     /// </summary>
     private readonly IEmployeeRepository _employeeRepository;
     /// <summary>
@@ -26,7 +26,7 @@ public class DepartmentShowService : IDepartmentShowService
     /// コンストラクタ
     /// </summary>
     /// <param name="context">アプリケーション用DbContext</param>
-    /// <param name="employeeRepository">従業員のCRUD操作インターフェイス</param>
+    /// <param name="employeeRepository">社員のCRUD操作インターフェイス</param>
     /// <param name="departmentRepository">部署のCRUD操作インターフェイス</param>
     public DepartmentShowService(
         AppDbContext context,
@@ -39,7 +39,7 @@ public class DepartmentShowService : IDepartmentShowService
     }
 
     /// <summary>
-    /// すべての従業員を取得する
+    /// すべての社員を取得する
     /// </summary>
     /// <returns></returns>
     public List<Department> GetDepartments()
@@ -47,7 +47,7 @@ public class DepartmentShowService : IDepartmentShowService
         var result = _departmentRepository.FindAll()!;
         if (result == null)
         {
-            throw new NotFoundException($"部門は存在しません");
+            throw new NotFoundException($"部署は存在しません");
         }
         return result;
     }

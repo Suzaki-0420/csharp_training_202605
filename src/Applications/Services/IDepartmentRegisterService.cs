@@ -1,7 +1,7 @@
 using csharp_training_202605.Applications.Domains;
 namespace csharp_training_202605.Applications.Services;
 /// <summary>
-/// 従業員登録サービスインターフェイス
+/// 社員登録サービスインターフェイス
 /// </summary>
 public interface IDepartmentRegisterService
 {

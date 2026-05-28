@@ -3,7 +3,7 @@ using csharp_training_202605.Applications.Services;
 using csharp_training_202605.Presentations.ViewModels;
 namespace csharp_training_202605.Presentations.Controllers;
 /// <summary>
-/// 従業員登録コントローラ
+/// 社員登録コントローラ
 /// </summary>
 [Route("EmployeeRegister")]
 public class EmployeeRegisterController : Controller
@@ -13,11 +13,11 @@ public class EmployeeRegisterController : Controller
     /// </summary>
     private readonly ILogger<EmployeeRegisterController> _logger;
     /// <summary>
-    /// 従業員登録サービスインターフェイス
+    /// 社員登録サービスインターフェイス
     /// </summary>
     private readonly IEmployeeRegisterService _employeeRegisterService;
     /// <summary>
-    /// 従業員登録ViewModelをEmployeeに変換するアダプター
+    /// 社員登録ViewModelをEmployeeに変換するアダプター
     /// </summary>
     private readonly EmployeeRegisterViewModelAdapter _adapter;
     /// <summary>
@@ -29,8 +29,8 @@ public class EmployeeRegisterController : Controller
     /// コンストラクタ
     /// </summary>
     /// <param name="logger">ロガー</param>
-    /// <param name="employeeRegisterService">従業員登録サービスインターフェイス</param>
-    /// <param name="employeeRegisterViewModelAdapter">従業員登録ViewModelをEmployeeに変換するアダプター</param>
+    /// <param name="employeeRegisterService">社員登録サービスインターフェイス</param>
+    /// <param name="employeeRegisterViewModelAdapter">社員登録ViewModelをEmployeeに変換するアダプター</param>
     /// <param name="empDataStore">TempDataを通じて一時的にViewModelを保存・復元するためのクラス</param>
     public EmployeeRegisterController(
         ILogger<EmployeeRegisterController> logger,
@@ -57,7 +57,7 @@ public class EmployeeRegisterController : Controller
         viewModel = _empDataStore.Load(this);
         if (viewModel == null)
         {
-            // 従業員登録ViewModelを生成する
+            // 社員登録ViewModelを生成する
             viewModel = new EmployeeRegisterViewModel();
         }
         // 部署一覧を取得してViewModelに設定する(SelectListItem形式)
@@ -140,7 +140,7 @@ public class EmployeeRegisterController : Controller
         }
         // EmployeeRegisterFormをドメインモデル:Employeeに変換する
         var employee = _adapter.Restore(viewModel!);
-        // 新しい従業員を登録する
+        // 新しい社員を登録する
         _employeeRegisterService.Register(employee);
         return View(viewModel);
     }
@@ -164,7 +164,7 @@ public class EmployeeRegisterController : Controller
     /// </summary>
     private void PopulateDepartments(EmployeeRegisterViewModel viewModel)
     {
-        // 従業員登録サービスから部署一覧を取得する
+        // 社員登録サービスから部署一覧を取得する
         var departments = _employeeRegisterService.GetDepartments();
         // 部署一覧をEmployeeRegisterViewModelに登録する
         viewModel.SetDepartments(departments);

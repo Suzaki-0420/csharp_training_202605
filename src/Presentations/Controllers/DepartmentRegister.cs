@@ -5,7 +5,7 @@ namespace csharp_training_202605.Presentations.Controllers;
 
 using csharp_training_202605.Presentations.ViewModels;
 /// <summary>
-/// 従業員登録コントローラ
+/// 社員登録コントローラ
 /// </summary>
 [Route("DepartmentRegister")]
 public class DepartmentRegisterController : Controller
@@ -15,11 +15,11 @@ public class DepartmentRegisterController : Controller
     /// </summary>
     private readonly ILogger<DepartmentRegisterController> _logger;
     /// <summary>
-    /// 従業員登録サービスインターフェイス
+    /// 社員登録サービスインターフェイス
     /// </summary>
     private readonly IDepartmentRegisterService _departmentRegisterService;
     /// <summary>
-    /// 従業員登録ViewModelをDepartmentに変換するアダプター
+    /// 社員登録ViewModelをDepartmentに変換するアダプター
     /// </summary>
     private readonly DepartmentRegisterViewModelAdapter _adapter;
     /// <summary>
@@ -31,8 +31,8 @@ public class DepartmentRegisterController : Controller
     /// コンストラクタ
     /// </summary>
     /// <param name="logger">ロガー</param>
-    /// <param name="departmentRegisterService">従業員登録サービスインターフェイス</param>
-    /// <param name="departmentRegisterViewModelAdapter">従業員登録ViewModelをDepartmentに変換するアダプター</param>
+    /// <param name="departmentRegisterService">社員登録サービスインターフェイス</param>
+    /// <param name="departmentRegisterViewModelAdapter">社員登録ViewModelをDepartmentに変換するアダプター</param>
     /// <param name="empDataStore">TempDataを通じて一時的にViewModelを保存・復元するためのクラス</param>
     public DepartmentRegisterController(
         ILogger<DepartmentRegisterController> logger,
@@ -59,7 +59,7 @@ public class DepartmentRegisterController : Controller
         viewModel = _empDataStore.Load(this);
         if (viewModel == null)
         {
-            // 従業員登録ViewModelを生成する
+            // 社員登録ViewModelを生成する
             viewModel = new DepartmentRegisterViewModel();
         }
 
@@ -124,7 +124,7 @@ public class DepartmentRegisterController : Controller
         }
         // DepartmentRegisterFormをドメインモデル:Departmentに変換する
         var department = _adapter.Restore(viewModel!);
-        // 新しい部門を登録する
+        // 新しい部署を登録する
         _departmentRegisterService.Register(department);
         return View(viewModel);
     }

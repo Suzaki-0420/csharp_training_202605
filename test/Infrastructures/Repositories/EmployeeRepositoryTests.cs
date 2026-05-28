@@ -75,7 +75,7 @@ public class EmployeeRightExistTest
         var addentity = new Employee("高橋達郎", "takahasi@csharp.com", "090-0000-0003", departmententity); //追加するエンティティ
         _employeerepository.Create(addentity);
 
-        var employees = _employeerepository.FindAll();//DBから追加後の従業員リストを取得
+        var employees = _employeerepository.FindAll();//DBから追加後の社員リストを取得
 
         Assert.AreEqual(3, employees.Count);
         AssertEmployee(employees[0], 1, "田中太郎", "tanakatarou@csharp.com", "090-0000-0001");
@@ -90,7 +90,7 @@ public class EmployeeRightExistTest
         var deleteentity = new Employee(1, "田中太郎", "tanakatarou@csharp.com", "090-0000-0001", departmententity); //追加するエンティティ
         _employeerepository.Delete(deleteentity);
 
-        var employees = _employeerepository.FindAll();//DBから削除後の従業員リストを取得
+        var employees = _employeerepository.FindAll();//DBから削除後の社員リストを取得
 
         Assert.AreEqual(1, employees.Count);
         AssertEmployee(employees[0], 2, "鈴木三郎", "suzukisaburou@csharp.com", "090-0000-0002");
@@ -103,7 +103,7 @@ public class EmployeeRightExistTest
         var deleteentity = new Employee(2, "鈴木次郎", "suzukisaburou@csharp.com", "090-0000-0002", departmententity); //追加するエンティティ
         _employeerepository.Renewal(deleteentity);
 
-        var employees = _employeerepository.FindAll();//DBから削除後の従業員リストを取得
+        var employees = _employeerepository.FindAll();//DBから削除後の社員リストを取得
 
         Assert.AreEqual(2, employees.Count);
         AssertEmployee(employees[0], 1, "田中太郎", "tanakatarou@csharp.com", "090-0000-0001");
@@ -117,7 +117,7 @@ public class EmployeeRightExistTest
         var deleteentity = new Employee(2, "鈴木次郎", "suzukisaburou@csharp.com", "090-0000-0002", null); //更新するエンティティ
         _employeerepository.Renewal(deleteentity);
 
-        var employees = _employeerepository.FindAll();//DBから削除後の従業員リストを取得
+        var employees = _employeerepository.FindAll();//DBから削除後の社員リストを取得
 
         Assert.AreEqual(2, employees.Count);
         AssertEmployee(employees[0], 1, "田中太郎", "tanakatarou@csharp.com", "090-0000-0001");

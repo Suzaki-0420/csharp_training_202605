@@ -8,17 +8,17 @@ namespace csharp_training_202605.Presentations.ViewModels;
 public class DepartmentDeleteViewModel
 {
 
-    [Display(Name = "部門")]
+    [Display(Name = "部署")]
     public int? Id { get; set; } = 0;
     /// <summary>
     /// 氏名
     /// </summary>
-    [Display(Name = "削除する部門名")]
+    [Display(Name = "削除する部署名")]
     public string? Name { get; set; } = string.Empty;
 
 
     /// <summary>
-    /// 従業員のリストをSelectListItemのリストに変換してプロパティに設定する
+    /// 社員のリストをSelectListItemのリストに変換してプロパティに設定する
     /// </summary>
     /// <param name="departments"></param>
     public void SetDepartments(List<Department> departments)
@@ -42,6 +42,6 @@ public class DepartmentDeleteViewModel
 
     public override string ToString()
     {
-        return $"部門番号={Id} , 部門名={Name}  ";
+        return $"部署番号={Id} , 部署名={Name}  ";
     }
 }

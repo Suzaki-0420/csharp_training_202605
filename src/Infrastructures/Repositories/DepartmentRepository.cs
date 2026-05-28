@@ -97,7 +97,7 @@ public class DepartmentRepository : IDepartmentRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "部門の削除ができませんでした。", e);
+                "部署の削除ができませんでした。", e);
         }
     }
 
@@ -114,7 +114,7 @@ public class DepartmentRepository : IDepartmentRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "部門の変更ができませんでした。", e);
+                "部署の変更ができませんでした。", e);
         }
     }
 }

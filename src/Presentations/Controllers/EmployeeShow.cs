@@ -3,7 +3,7 @@ using csharp_training_202605.Applications.Services;
 using csharp_training_202605.Presentations.ViewModels;
 namespace csharp_training_202605.Presentations.Controllers;
 /// <summary>
-/// 従業員登録コントローラ
+/// 社員登録コントローラ
 /// </summary>
 [Route("EmployeeShow")]
 public class EmployeeShowController : Controller
@@ -13,11 +13,11 @@ public class EmployeeShowController : Controller
     /// </summary>
     private readonly ILogger<EmployeeShowController> _logger;
     /// <summary>
-    /// 従業員登録サービスインターフェイス
+    /// 社員登録サービスインターフェイス
     /// </summary>
     private readonly IEmployeeShowService _employeeShowService;
     /// <summary>
-    /// 従業員登録ViewModelをEmployeeに変換するアダプター
+    /// 社員登録ViewModelをEmployeeに変換するアダプター
     /// </summary>
     private readonly EmployeeShowViewModelAdapter _adapter;
     /// <summary>

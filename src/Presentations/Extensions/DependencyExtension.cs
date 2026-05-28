@@ -53,11 +53,11 @@ public static class DependencyExtension
     {
         // ドメインモデル:部署と部署エンティティの相互変換インターフェイスの実装
         services.AddScoped<DepartmentEntityAdapter>();
-        // ドメインモデル:従業員と従業員エンティティの相互変換インターフェイスの実装
+        // ドメインモデル:社員と社員エンティティの相互変換インターフェイスの実装
         services.AddScoped<EmployeeEntityAdapter>();
         // ドメインオブジェクト:部署のCRUD操作インターフェイス実装
         services.AddScoped<IDepartmentRepository, DepartmentRepository>();
-        // ドメインオブジェクト:従業員のCRUD操作インターフェイスの実装
+        // ドメインオブジェクト:社員のCRUD操作インターフェイスの実装
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
     }
 
@@ -67,21 +67,21 @@ public static class DependencyExtension
     /// <param name="services">DIコンテナ</param>
     private static void SettingApplications(IServiceCollection services)
     {
-        // 従業員登録サービスインターフェイスの実装
+        // 社員登録サービスインターフェイスの実装
         services.AddScoped<IEmployeeRegisterService, EmployeeRegisterService>();
         // 部署登録サービスインターフェイスの実装
         services.AddScoped<IDepartmentRegisterService, DepartmentRegisterService>();
-        // 従業員一覧サービスインターフェイスの実装
+        // 社員一覧サービスインターフェイスの実装
         services.AddScoped<IEmployeeShowService, EmployeeShowService>();
-        // 部門一覧サービスインターフェイスの実装
+        // 部署一覧サービスインターフェイスの実装
         services.AddScoped<IDepartmentShowService, DepartmentShowService>();
-        // 従業員削除サービスインターフェイスの実装
+        // 社員削除サービスインターフェイスの実装
         services.AddScoped<IEmployeeDeleteService, EmployeeDeleteService>();
-        // 部門削除サービスインターフェイスの実装
+        // 部署削除サービスインターフェイスの実装
         services.AddScoped<IDepartmentDeleteService, DepartmentDeleteService>();
-        // 従業員更新サービスインターフェイスの実装
+        // 社員更新サービスインターフェイスの実装
         services.AddScoped<IEmployeeUpdateService, EmployeeUpdateService>();
-        // 部門更新サービスインターフェイスの実装
+        // 部署更新サービスインターフェイスの実装
         services.AddScoped<IDepartmentUpdateService, DepartmentUpdateService>();
     }
 
@@ -92,7 +92,7 @@ public static class DependencyExtension
     /// <param name="services">DIコンテナ</param>
     private static void SettingPresentations(IServiceCollection services)
     {
-        // 従業員登録ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        // 社員登録ViewModelをドメインオブジェクト:社員に変換するアダプターインターフェイスの実装
         services.AddScoped<EmployeeRegisterViewModelAdapter>();
         // TempDataへのEmployeeRegisterViewの保存・復元するためのクラス
         // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
@@ -101,7 +101,7 @@ public static class DependencyExtension
             new TempDataStore<EmployeeRegisterViewModel>("EmployeeRegisterViewModel")
         );
 
-        // 部署登録ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        // 部署登録ViewModelをドメインオブジェクト:社員に変換するアダプターインターフェイスの実装
         services.AddScoped<DepartmentRegisterViewModelAdapter>();
         // TempDataへのDepartmentRegisterViewの保存・復元するためのクラス
         // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
@@ -110,7 +110,7 @@ public static class DependencyExtension
             new TempDataStore<DepartmentRegisterViewModel>("DepartmentRegisterViewModel")
         );
 
-        // 従業員一覧表示ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        // 社員一覧表示ViewModelをドメインオブジェクト:社員に変換するアダプターインターフェイスの実装
         services.AddScoped<EmployeeShowViewModelAdapter>();
         // TempDataへのEmployeeRegisterViewの保存・復元するためのクラス
         // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
@@ -119,7 +119,7 @@ public static class DependencyExtension
             new TempDataStore<EmployeeShowViewModel>("EmployeeShowViewModel")
         );
 
-        // 部門一覧表示ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        // 部署一覧表示ViewModelをドメインオブジェクト:社員に変換するアダプターインターフェイスの実装
         services.AddScoped<DepartmentShowViewModelAdapter>();
         // TempDataへのEmployeeRegisterViewの保存・復元するためのクラス
         // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
@@ -128,7 +128,7 @@ public static class DependencyExtension
             new TempDataStore<DepartmentShowViewModel>("DepartmentShowViewModel")
         );
 
-        // 従業員削除ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        // 社員削除ViewModelをドメインオブジェクト:社員に変換するアダプターインターフェイスの実装
         services.AddScoped<EmployeeDeleteViewModelAdapter>();
         // TempDataへのEmployeeDeleteViewの保存・復元するためのクラス
         // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
@@ -137,7 +137,7 @@ public static class DependencyExtension
             new TempDataStore<EmployeeDeleteViewModel>("EmployeeDeleteViewModel")
         );
 
-        // 従業員削除ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        // 社員削除ViewModelをドメインオブジェクト:社員に変換するアダプターインターフェイスの実装
         services.AddScoped<DepartmentDeleteViewModelAdapter>();
         // TempDataへのDepartmentDeleteViewの保存・復元するためのクラス
         // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
@@ -146,7 +146,7 @@ public static class DependencyExtension
             new TempDataStore<DepartmentDeleteViewModel>("DepartmentDeleteViewModel")
         );
 
-        // 従業員削除ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        // 社員削除ViewModelをドメインオブジェクト:社員に変換するアダプターインターフェイスの実装
         services.AddScoped<EmployeeUpdateViewModelAdapter>();
         // TempDataへのEmployeeDeleteViewの保存・復元するためのクラス
         // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
@@ -155,7 +155,7 @@ public static class DependencyExtension
             new TempDataStore<EmployeeUpdateViewModel>("EmployeeUpdateViewModel")
         );
 
-        // 部門削除ViewModelをドメインオブジェクト:従業員に変換するアダプターインターフェイスの実装
+        // 部署削除ViewModelをドメインオブジェクト:社員に変換するアダプターインターフェイスの実装
         services.AddScoped<DepartmentUpdateViewModelAdapter>();
         // TempDataへのDepartmentDeleteViewの保存・復元するためのクラス
         // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する

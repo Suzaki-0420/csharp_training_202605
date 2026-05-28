@@ -8,7 +8,7 @@ namespace csharp_training_202605.Presentations.ViewModels;
 public class DepartmentUpdateViewModel
 {
 
-    [Display(Name = "部門")]
+    [Display(Name = "部署")]
     public int? Id { get; set; } = 0;
     /// <summary>
     /// 氏名
@@ -22,6 +22,6 @@ public class DepartmentUpdateViewModel
 
     public override string ToString()
     {
-        return $"部門番号={Id} , 部門名={Name}  ";
+        return $"部署番号={Id} , 部署名={Name}  ";
     }
 }

@@ -1,18 +1,18 @@
 @using csharp_training_202605.Presentations.ViewModels
 @model DepartmentUpdateViewModel;
 @{
-    ViewData["Title"] = "部門更新(完了)";
+    ViewData["Title"] = "部署更新(完了)";
 }
 <h2 class="text-center mt-4">@ViewData["Title"]</h2>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6 col-sm-8 text-center">
             <div class="alert alert-success" role="alert">
-                部門情報の更新が完了しました。
+                部署情報の更新が完了しました。
             </div>
             <table class="table table-hover">
                 <tbody>
-                    @*更新した部門と所属部署を表示する*@
+                    @*更新した部署と所属部署を表示する*@
                     <tr>
                         <td class="fw-bold">@Html.DisplayNameFor(m => m.Name)</td>
                         <td>@Html.DisplayFor(m => m.Name)</td>
@@ -21,7 +21,7 @@
             </table>
             @*メニューに戻る*@
             <a asp-action="Show" asp-controller="DepartmentShow" class="btn btn-secondary mt-3 ms-2">
-                部門一覧に戻る
+                部署一覧に戻る
             </a>
         </div>
     </div>

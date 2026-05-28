@@ -12,7 +12,7 @@ public class DepartmentShowViewModel
     public int? Id { get; set; } = 0;
 
     /// <summary>
-    /// 従業員名
+    /// 社員名
     /// </summary>
     [Display(Name = "部署名")]
     public string? Name { get; set; } = string.Empty;

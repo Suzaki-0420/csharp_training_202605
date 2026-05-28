@@ -6,7 +6,7 @@ using csharp_training_202605.Infrastructures.Adapters;
 using csharp_training_202605.Exceptions;
 namespace csharp_training_202605.Infrastructures.Repositories;
 /// <summary>
-/// ドメインオブジェクト:従業員のCRUD操作インターフェイスの実装
+/// ドメインオブジェクト:社員のCRUD操作インターフェイスの実装
 /// </summary>
 public class EmployeeRepository : IEmployeeRepository
 {
@@ -15,7 +15,7 @@ public class EmployeeRepository : IEmployeeRepository
     /// </summary>
     private readonly AppDbContext _context;
     /// <summary>
-    /// ドメインモデル:従業員と従業員エンティティの相互変換インターフェイスの実装
+    /// ドメインモデル:社員と社員エンティティの相互変換インターフェイスの実装
     /// </summary>
     private readonly EmployeeEntityAdapter _adapter;
 
@@ -31,9 +31,9 @@ public class EmployeeRepository : IEmployeeRepository
     }
 
     /// <summary>
-    /// 従業員を永続化する
+    /// 社員を永続化する
     /// </summary>
-    /// <param name="employee">永続化対象の従業員</param>
+    /// <param name="employee">永続化対象の社員</param>
     public void Create(Employee employee)
     {
         try
@@ -45,7 +45,7 @@ public class EmployeeRepository : IEmployeeRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "従業員の永続化ができませんでした。", e);
+                "社員の永続化ができませんでした。", e);
         }
     }
 
@@ -65,7 +65,7 @@ public class EmployeeRepository : IEmployeeRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "従業員の変更ができませんでした。", e);
+                "社員の変更ができませんでした。", e);
         }
     }
 
@@ -92,7 +92,7 @@ public class EmployeeRepository : IEmployeeRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "従業員一覧を取得できませんでした。", e);
+                "社員一覧を取得できませんでした。", e);
         }
     }
 
@@ -113,7 +113,7 @@ public class EmployeeRepository : IEmployeeRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "指定された従業員を取得できませんでした。", e);
+                "指定された社員を取得できませんでした。", e);
         }
     }
 
@@ -131,7 +131,7 @@ public class EmployeeRepository : IEmployeeRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "従業員の削除ができませんでした。", e);
+                "社員の削除ができませんでした。", e);
         }
     }
 }

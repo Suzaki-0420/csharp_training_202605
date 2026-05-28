@@ -1,18 +1,18 @@
 @using csharp_training_202605.Presentations.ViewModels
 @model DepartmentRegisterViewModel;
 @{
-    ViewData["Title"] = "部門登録(完了)";
+    ViewData["Title"] = "部署登録(完了)";
 }
 <h2 class="text-center mt-4">@ViewData["Title"]</h2>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6 col-sm-8 text-center">
             <div class="alert alert-success" role="alert">
-                部門の登録が完了しました。
+                部署の登録が完了しました。
             </div>
             <table class="table table-hover">
                 <tbody>
-                    @*登録した部門を表示する*@
+                    @*登録した部署を表示する*@
                     <tr>
                         <td class="fw-bold">@Html.DisplayNameFor(m => m.Name)</td>
                         <td>@Html.DisplayFor(m => m.Name)</td>
@@ -25,7 +25,7 @@
             </a>
             @*メニューに戻る*@
             <a asp-action="Show" asp-controller="DepartmentShow" class="btn btn-secondary mt-3 ms-2">
-                部門一覧を確認する
+                部署一覧を確認する
             </a>
         </div>
     </div>

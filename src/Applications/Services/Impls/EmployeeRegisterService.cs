@@ -4,7 +4,7 @@ using csharp_training_202605.Exceptions;
 using csharp_training_202605.Infrastructures.Context;
 namespace csharp_training_202605.Applications.Services.Impls;
 /// <summary>
-/// 従業員登録サービスインターフェイスの実装
+/// 社員登録サービスインターフェイスの実装
 /// </summary>
 public class EmployeeRegisterService : IEmployeeRegisterService
 {
@@ -14,7 +14,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
     /// </summary>
     private readonly AppDbContext _context;
     /// <summary>
-    /// ドメインオブジェクト:従業員のCRUD操作インターフェイス
+    /// ドメインオブジェクト:社員のCRUD操作インターフェイス
     /// </summary>
     private readonly IEmployeeRepository _employeeRepository;
     /// <summary>
@@ -26,7 +26,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
     /// コンストラクタ
     /// </summary>
     /// <param name="context">アプリケーション用DbContext</param>
-    /// <param name="employeeRepository">従業員のCRUD操作インターフェイス</param>
+    /// <param name="employeeRepository">社員のCRUD操作インターフェイス</param>
     /// <param name="departmentRepository">部署のCRUD操作インターフェイス</param>
     public EmployeeRegisterService(
         AppDbContext context,
@@ -63,7 +63,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
     }
 
     /// <summary>
-    /// 新しい従業員を登録する
+    /// 新しい社員を登録する
     /// </summary>
     /// <param name="employee"></param>
     public void Register(Employee employee)
@@ -72,7 +72,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
         {
             // トランザクションの開始
             _context.Database.BeginTransaction();
-            // 従業員の登録
+            // 社員の登録
             _employeeRepository.Create(employee);
             // トランザクションのコミット
             _context.Database.CommitTransaction();
@@ -92,7 +92,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
             .ToList();
         if (sameemail.Count == 0)
         {
-            return true; //従業員追加OK
+            return true; //社員追加OK
         }
         else
         {
@@ -107,7 +107,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
             .ToList();
         if (samephone.Count == 0)
         {
-            return true; //従業員追加OK
+            return true; //社員追加OK
         }
         else
         {

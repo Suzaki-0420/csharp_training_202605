@@ -3,7 +3,7 @@ using csharp_training_202605.Applications.Services;
 using csharp_training_202605.Presentations.ViewModels;
 namespace csharp_training_202605.Presentations.Controllers;
 /// <summary>
-/// 従業員登録コントローラ
+/// 社員登録コントローラ
 /// </summary>
 [Route("EmployeeUpdate")]
 public class EmployeeUpdateController : Controller
@@ -13,11 +13,11 @@ public class EmployeeUpdateController : Controller
     /// </summary>
     private readonly ILogger<EmployeeUpdateController> _logger;
     /// <summary>
-    /// 従業員登録サービスインターフェイス
+    /// 社員登録サービスインターフェイス
     /// </summary>
     private readonly IEmployeeUpdateService _employeeUpdateService;
     /// <summary>
-    /// 従業員登録ViewModelをEmployeeに変換するアダプター
+    /// 社員登録ViewModelをEmployeeに変換するアダプター
     /// </summary>
     private readonly EmployeeUpdateViewModelAdapter _adapter;
     /// <summary>
@@ -29,8 +29,8 @@ public class EmployeeUpdateController : Controller
     /// コンストラクタ
     /// </summary>
     /// <param name="logger">ロガー</param>
-    /// <param name="employeeUpdateService">従業員登録サービスインターフェイス</param>
-    /// <param name="employeeUpdateViewModelAdapter">従業員登録ViewModelをEmployeeに変換するアダプター</param>
+    /// <param name="employeeUpdateService">社員登録サービスインターフェイス</param>
+    /// <param name="employeeUpdateViewModelAdapter">社員登録ViewModelをEmployeeに変換するアダプター</param>
     /// <param name="empDataStore">TempDataを通じて一時的にViewModelを保存・復元するためのクラス</param>
     public EmployeeUpdateController(
         ILogger<EmployeeUpdateController> logger,
@@ -66,7 +66,7 @@ public class EmployeeUpdateController : Controller
     [HttpPost("Confirm")]
     public IActionResult Confirm(EmployeeUpdateViewModel viewModel)
     {
-        Console.WriteLine($"該当従業員最初チェックId：{viewModel.Id}");
+        Console.WriteLine($"該当社員最初チェックId：{viewModel.Id}");
         // バリデーションチェック
         if (!ModelState.IsValid) // バリデーションエラーあり
         {
@@ -83,8 +83,8 @@ public class EmployeeUpdateController : Controller
         //viewModel.Name = employee.Name;
         //viewModel.DeptId = employee.Department!.Id;
         //viewModel.DeptName = employee.Department.Name;
-        Console.WriteLine($"該当従業員Id：{viewModel.Id}");
-        Console.WriteLine($"該当従業員Email：{viewModel.Email}");
+        Console.WriteLine($"該当社員Id：{viewModel.Id}");
+        Console.WriteLine($"該当社員Email：{viewModel.Email}");
 
         bool emailjudge = _employeeUpdateService.EmailAffiliationCheck(viewModel.Email, viewModel.Id);
         bool phonejudge = _employeeUpdateService.PhoneAffiliationCheck(viewModel.Phone, viewModel.Id);
@@ -105,8 +105,8 @@ public class EmployeeUpdateController : Controller
         }
         var department = _employeeUpdateService.GetById(viewModel.DeptId ?? 0);
         viewModel.DeptName = department.Name;
-        Console.WriteLine($"該当従業員DeptId：{viewModel.DeptId}");
-        Console.WriteLine($"該当従業員DeptName：{viewModel.DeptName}");
+        Console.WriteLine($"該当社員DeptId：{viewModel.DeptId}");
+        Console.WriteLine($"該当社員DeptName：{viewModel.DeptName}");
         // 確認画面を表示する
         return View(viewModel);
     }
@@ -143,7 +143,7 @@ public class EmployeeUpdateController : Controller
         }
         // EmployeeUpdateFormをドメインモデル:Employeeに変換する
         var employee = _adapter.Restore(viewModel!);
-        // 新しい従業員を登録する
+        // 新しい社員を登録する
         _employeeUpdateService.Update(employee);
         return View(viewModel);
     }
@@ -167,7 +167,7 @@ public class EmployeeUpdateController : Controller
     /// </summary>
     private void PopulateDepartments(EmployeeUpdateViewModel viewModel)
     {
-        // 従業員登録サービスから部署一覧を取得する
+        // 社員登録サービスから部署一覧を取得する
         var departments = _employeeUpdateService.GetDepartments();
         // 部署一覧をEmployeeUpdateViewModelに登録する
         viewModel.SetDepartments(departments);

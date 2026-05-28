@@ -1,7 +1,7 @@
 using csharp_training_202605.Applications.Domains;
 namespace csharp_training_202605.Applications.Services;
 /// <summary>
-/// 従業員登録サービスインターフェイス
+/// 社員登録サービスインターフェイス
 /// </summary>
 public interface IEmployeeRegisterService
 {
@@ -19,7 +19,7 @@ public interface IEmployeeRegisterService
     Department GetById(int id);
 
     /// <summary>
-    /// 新しい従業員を登録する
+    /// 新しい社員を登録する
     /// </summary>
     /// <param name="employee"></param>
     void Register(Employee employee);

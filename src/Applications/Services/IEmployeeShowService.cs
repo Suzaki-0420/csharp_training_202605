@@ -4,7 +4,7 @@ namespace csharp_training_202605.Applications.Services;
 public interface IEmployeeShowService
 {
     /// <summary>
-    /// すべての従業員を取得する
+    /// すべての社員を取得する
     /// </summary>
     /// <returns></returns>
     List<Employee> GetEmployees();

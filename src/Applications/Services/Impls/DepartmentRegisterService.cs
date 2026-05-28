@@ -4,7 +4,7 @@ using csharp_training_202605.Exceptions;
 using csharp_training_202605.Infrastructures.Context;
 namespace csharp_training_202605.Applications.Services.Impls;
 /// <summary>
-/// 従業員登録サービスインターフェイスの実装
+/// 社員登録サービスインターフェイスの実装
 /// </summary>
 public class DepartmentRegisterService : IDepartmentRegisterService
 {
@@ -14,7 +14,7 @@ public class DepartmentRegisterService : IDepartmentRegisterService
     /// </summary>
     private readonly AppDbContext _context;
     /// <summary>
-    /// ドメインオブジェクト:従業員のCRUD操作インターフェイス
+    /// ドメインオブジェクト:社員のCRUD操作インターフェイス
     /// </summary>
     private readonly IDepartmentRepository _employeeRepository;
     /// <summary>
@@ -26,7 +26,7 @@ public class DepartmentRegisterService : IDepartmentRegisterService
     /// コンストラクタ
     /// </summary>
     /// <param name="context">アプリケーション用DbContext</param>
-    /// <param name="departmentRepository">従業員のCRUD操作インターフェイス</param>
+    /// <param name="departmentRepository">社員のCRUD操作インターフェイス</param>
     /// <param name="departmentRepository">部署のCRUD操作インターフェイス</param>
     public DepartmentRegisterService(
         AppDbContext context,
@@ -63,7 +63,7 @@ public class DepartmentRegisterService : IDepartmentRegisterService
     }
 
     /// <summary>
-    /// 新しい従業員を登録する
+    /// 新しい社員を登録する
     /// </summary>
     /// <param name="department"></param>
     public void Register(Department department)
@@ -72,7 +72,7 @@ public class DepartmentRegisterService : IDepartmentRegisterService
         {
             // トランザクションの開始
             _context.Database.BeginTransaction();
-            // 従業員の登録
+            // 社員の登録
             _departmentRepository.Create(department);
             // トランザクションのコミット
             _context.Database.CommitTransaction();

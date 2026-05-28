@@ -2,7 +2,7 @@ using csharp_training_202605.Applications.Adapters;
 using csharp_training_202605.Applications.Domains;
 namespace csharp_training_202605.Presentations.ViewModels;
 /// <summary>
-/// EmployeeRegisterViewModel(従業員登録ViewModel)を
+/// EmployeeRegisterViewModel(社員登録ViewModel)を
 /// ドメインオブジェクト:Employeeに変換するアダプターインターフェイスの実装
 /// </summary>
 /// <typeparam name="TDomain">Employee</typeparam>

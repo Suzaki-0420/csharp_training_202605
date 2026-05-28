@@ -273,7 +273,7 @@
             <mxPoint x="1887.5" y="596" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="n5JxRImGy6MU9rIXnL46-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="部門登録" vertex="1">
+        <mxCell id="n5JxRImGy6MU9rIXnL46-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="部署登録" vertex="1">
           <mxGeometry height="30" width="60" x="1270" y="60" as="geometry" />
         </mxCell>
         <mxCell id="n5JxRImGy6MU9rIXnL46-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#33FF99);" value="Register" vertex="1">
@@ -364,7 +364,7 @@
         <mxCell id="n5JxRImGy6MU9rIXnL46-68" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="&lt;div&gt;Department&lt;/div&gt;&lt;div&gt;ShowViewModelAdapter&lt;/div&gt;" vertex="1">
           <mxGeometry height="250" width="160" x="1702" y="1040" as="geometry" />
         </mxCell>
-        <mxCell id="n5JxRImGy6MU9rIXnL46-79" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="部門一覧" vertex="1">
+        <mxCell id="n5JxRImGy6MU9rIXnL46-79" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="部署一覧" vertex="1">
           <mxGeometry height="30" width="60" x="1322" y="970" as="geometry" />
         </mxCell>
         <mxCell id="n5JxRImGy6MU9rIXnL46-93" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#33FF99);" value="Show" vertex="1">
@@ -424,7 +424,7 @@
         <mxCell id="n5JxRImGy6MU9rIXnL46-113" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="&lt;div&gt;Employee&lt;/div&gt;&lt;div&gt;ShowViewModelAdapter&lt;/div&gt;" vertex="1">
           <mxGeometry height="250" width="160" x="480" y="1040" as="geometry" />
         </mxCell>
-        <mxCell id="n5JxRImGy6MU9rIXnL46-114" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="従業員一覧" vertex="1">
+        <mxCell id="n5JxRImGy6MU9rIXnL46-114" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="社員一覧" vertex="1">
           <mxGeometry height="30" width="90" x="100" y="1000" as="geometry" />
         </mxCell>
         <mxCell id="n5JxRImGy6MU9rIXnL46-115" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#33FF99);" value="Show" vertex="1">
@@ -709,7 +709,7 @@
         <mxCell id="n5JxRImGy6MU9rIXnL46-222" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Department&lt;br&gt;&lt;div&gt;DeleteViewModelAdapter&lt;/div&gt;" vertex="1">
           <mxGeometry height="870" width="160" x="1729" y="1390" as="geometry" />
         </mxCell>
-        <mxCell id="n5JxRImGy6MU9rIXnL46-223" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="部門削除" vertex="1">
+        <mxCell id="n5JxRImGy6MU9rIXnL46-223" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="部署削除" vertex="1">
           <mxGeometry height="30" width="60" x="1349" y="1340" as="geometry" />
         </mxCell>
         <mxCell id="n5JxRImGy6MU9rIXnL46-224" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="AppDbContext" vertex="1">
@@ -1126,7 +1126,7 @@
         <mxCell id="n5JxRImGy6MU9rIXnL46-313" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Department&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Update&lt;/span&gt;ViewModelAdapter&lt;/div&gt;" vertex="1">
           <mxGeometry height="580" width="160" x="1760" y="2430" as="geometry" />
         </mxCell>
-        <mxCell id="n5JxRImGy6MU9rIXnL46-314" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="部門更新" vertex="1">
+        <mxCell id="n5JxRImGy6MU9rIXnL46-314" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="部署更新" vertex="1">
           <mxGeometry height="30" width="60" x="1380" y="2380" as="geometry" />
         </mxCell>
         <mxCell id="n5JxRImGy6MU9rIXnL46-315" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="AppDbContext" vertex="1">

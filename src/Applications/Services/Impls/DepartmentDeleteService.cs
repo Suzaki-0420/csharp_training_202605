@@ -4,7 +4,7 @@ using csharp_training_202605.Exceptions;
 using csharp_training_202605.Infrastructures.Context;
 namespace csharp_training_202605.Applications.Services.Impls;
 /// <summary>
-/// 従業員登録サービスインターフェイスの実装
+/// 社員登録サービスインターフェイスの実装
 /// </summary>
 public class DepartmentDeleteService : IDepartmentDeleteService
 {
@@ -14,7 +14,7 @@ public class DepartmentDeleteService : IDepartmentDeleteService
     /// </summary>
     private readonly AppDbContext _context;
     /// <summary>
-    /// ドメインオブジェクト:従業員のCRUD操作インターフェイス
+    /// ドメインオブジェクト:社員のCRUD操作インターフェイス
     /// </summary>
     private readonly IEmployeeRepository _employeeRepository;
     /// <summary>
@@ -26,7 +26,7 @@ public class DepartmentDeleteService : IDepartmentDeleteService
     /// コンストラクタ
     /// </summary>
     /// <param name="context">アプリケーション用DbContext</param>
-    /// <param name="employeeRepository">従業員のCRUD操作インターフェイス</param>
+    /// <param name="employeeRepository">社員のCRUD操作インターフェイス</param>
     /// <param name="departmentRepository">部署のCRUD操作インターフェイス</param>
     public DepartmentDeleteService(
         AppDbContext context,
@@ -48,7 +48,7 @@ public class DepartmentDeleteService : IDepartmentDeleteService
         var result = _departmentRepository.FindById(id)!;
         if (result == null)
         {
-            throw new NotFoundException($"部門d{id}に該当する部門は存在しません");
+            throw new NotFoundException($"部署d{id}に該当する部署は存在しません");
         }
         return result;
     }
@@ -63,7 +63,7 @@ public class DepartmentDeleteService : IDepartmentDeleteService
     }
 
     /// <summary>
-    /// 既存の従業員を削除する
+    /// 既存の社員を削除する
     /// </summary>
     /// <param name="employee"></param>
     public void Delete(Department department)
@@ -72,7 +72,7 @@ public class DepartmentDeleteService : IDepartmentDeleteService
         {
             // トランザクションの開始
             _context.Database.BeginTransaction();
-            // 従業員の登録
+            // 社員の登録
             _departmentRepository.Delete(department);
             // トランザクションのコミット
             _context.Database.CommitTransaction();

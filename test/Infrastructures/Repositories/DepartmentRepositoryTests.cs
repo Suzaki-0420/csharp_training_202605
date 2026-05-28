@@ -72,7 +72,7 @@ public class DepartmentRightExistTest
         var addentity = new Department("営業部"); //追加するエンティティ
         _departmentrepository.Create(addentity);
 
-        var departments = _departmentrepository.FindAll();//DBから追加後の従業員リストを取得
+        var departments = _departmentrepository.FindAll();//DBから追加後の社員リストを取得
 
         Assert.AreEqual(4, departments.Count);
         AssertDepartment(departments[0], 1, "総務部");
@@ -87,7 +87,7 @@ public class DepartmentRightExistTest
         var deleteentity = new Department(3, "開発部"); //削除するエンティティ
         _departmentrepository.Delete(deleteentity);
 
-        var departments = _departmentrepository.FindAll();//DBから追加後の従業員リストを取得
+        var departments = _departmentrepository.FindAll();//DBから追加後の社員リストを取得
 
         Assert.AreEqual(2, departments.Count);
         AssertDepartment(departments[0], 1, "総務部");
@@ -100,7 +100,7 @@ public class DepartmentRightExistTest
         var deleteentity = new Department(3, "営業部"); //更新するエンティティ
         _departmentrepository.Renewal(deleteentity);
 
-        var departments = _departmentrepository.FindAll();//DBから追加後の従業員リストを取得
+        var departments = _departmentrepository.FindAll();//DBから追加後の社員リストを取得
 
         Assert.AreEqual(3, departments.Count);
         AssertDepartment(departments[0], 1, "総務部");

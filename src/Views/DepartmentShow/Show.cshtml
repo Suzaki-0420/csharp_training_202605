@@ -3,7 +3,7 @@
 @* View が受け取るデータ型（ViewModel）を宣言asp-for はこの型のプロパティと結びつける *@
 @model List<DepartmentShowViewModel>
 @{
-    ViewData["Title"] = "部門一覧";
+    ViewData["Title"] = "部署一覧";
 }
 <h2 class="text-center mt-4">@ViewData["Title"]</h2>
 
@@ -11,8 +11,8 @@
     <table class="table table-bordered w-auto">
         <thead class="table-light">
             <tr>
-                <th>部門ID</th>
-                <th>部門名</th>
+                <th>部署ID</th>
+                <th>部署名</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -48,5 +48,5 @@
 </div>
 @* 新規追加ボタン *@
 <div class="d-flex justify-content-center gap-3 my-4">
-    <a asp-controller="DepartmentRegister" asp-action="Enter" class="btn btn-success">新規部門の追加</a>
+    <a asp-controller="DepartmentRegister" asp-action="Enter" class="btn btn-success">新規部署の追加</a>
 </div>

@@ -3,7 +3,7 @@ using csharp_training_202605.Applications.Services;
 using csharp_training_202605.Presentations.ViewModels;
 namespace csharp_training_202605.Presentations.Controllers;
 /// <summary>
-/// 従業員登録コントローラ
+/// 社員登録コントローラ
 /// </summary>
 [Route("DepartmentUpdate")]
 public class DepartmentUpdateController : Controller
@@ -13,11 +13,11 @@ public class DepartmentUpdateController : Controller
     /// </summary>
     private readonly ILogger<DepartmentUpdateController> _logger;
     /// <summary>
-    /// 従業員登録サービスインターフェイス
+    /// 社員登録サービスインターフェイス
     /// </summary>
     private readonly IDepartmentUpdateService _DepartmentUpdateService;
     /// <summary>
-    /// 従業員登録ViewModelをDepartmentに変換するアダプター
+    /// 社員登録ViewModelをDepartmentに変換するアダプター
     /// </summary>
     private readonly DepartmentUpdateViewModelAdapter _adapter;
     /// <summary>
@@ -29,8 +29,8 @@ public class DepartmentUpdateController : Controller
     /// コンストラクタ
     /// </summary>
     /// <param name="logger">ロガー</param>
-    /// <param name="DepartmentUpdateService">従業員登録サービスインターフェイス</param>
-    /// <param name="DepartmentUpdateViewModelAdapter">従業員登録ViewModelをDepartmentに変換するアダプター</param>
+    /// <param name="DepartmentUpdateService">社員登録サービスインターフェイス</param>
+    /// <param name="DepartmentUpdateViewModelAdapter">社員登録ViewModelをDepartmentに変換するアダプター</param>
     /// <param name="empDataStore">TempDataを通じて一時的にViewModelを保存・復元するためのクラス</param>
     public DepartmentUpdateController(
         ILogger<DepartmentUpdateController> logger,
@@ -64,7 +64,7 @@ public class DepartmentUpdateController : Controller
     [HttpPost("Confirm")]
     public IActionResult Confirm(DepartmentUpdateViewModel viewModel)
     {
-        Console.WriteLine($"該当従業員最初チェックId：{viewModel.Id}");
+        Console.WriteLine($"該当社員最初チェックId：{viewModel.Id}");
         // バリデーションチェック
         if (!ModelState.IsValid) // バリデーションエラーあり
         {
@@ -120,7 +120,7 @@ public class DepartmentUpdateController : Controller
         }
         // DepartmentUpdateFormをドメインモデル:Departmentに変換する
         var Department = _adapter.Restore(viewModel!);
-        // 新しい従業員を登録する
+        // 新しい社員を登録する
         _DepartmentUpdateService.Update(Department);
         return View(viewModel);
     }
